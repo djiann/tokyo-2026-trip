@@ -46,7 +46,40 @@ A cute, minimalist travel overview map of [填入目的地] for a [填入天數]
 - **柔和粉彩色調 (Soft pastel tones)**：使用米白、淺藍、淡粉紅等溫和的顏色，給人輕鬆、可愛、溫馨的感覺。
 - **微縮地標圖示 (Tiny cute icons)**：用簡單可愛的小插圖來代表知名地標（例如晴空塔、摩天輪、鳥居等），很像日本旅遊雜誌或手冊裡常見的附錄地圖。
 
-### 2. 每日行程地圖 Prompt (Daily Map)
+### 2. 繁中旅程路線圖 Prompt (Traditional Chinese Route Map)
+**提示詞（適合產出含標題、DAY 站點、必吃清單與旅行小貼士的總覽圖）**：
+```text
+Create a polished illustrated travel route overview map in Traditional Chinese for a [填入目的地] [填入天數]-day family trip, based on a Japanese travel guide appendix style.
+
+Canvas and style: landscape poster, cute minimalist flat vector, Japanese travel guide aesthetic, soft pastel palette, clean color blocks, warm beige background, light blue rivers, pale pink and mint accents, no complex shading. Overall tone coordinated, family-friendly, summer vacation mood.
+
+Title area at the top in Traditional Chinese:
+- Main title: 「[填入主標題，例如：東京 7 日親子深度行]」
+- Subtitle: 「[填入副標，例如：上野住宿基地｜水族館・夏祭・花火・光雕秀・美食散策]」
+Use large friendly rounded Traditional Chinese typography.
+
+Main composition: draw one large winding gradient road, like a board game path, starting at [填入起點，例如：成田機場] and ending at [填入終點，例如：成田機場]. The road should snake across the whole map with a smooth gradient color from sky blue to mint green to peach pink to warm coral to represent trip progress. Add an airplane/train/transport icon at both start and finish. Add a small compass, clouds, sun, moon, sparkles, and a cute travel mascot with a suitcase.
+
+Every day must be a large circular stop along the road, with different pastel theme colors and clearly readable labels in Traditional Chinese/English day format: 「DAY 1」, 「DAY 2」, 「DAY 3」... Inside or next to each circle, include tiny illustrated landmarks, Traditional Chinese place names, and a must-eat food icon.
+
+Day station details:
+DAY 1: label 「[Day1 區域/主題]」, illustrations: [Day1 主要景點插畫]. Food icon: [Day1 必吃美食小圖示]. Food label 「[Day1 必吃美食]」.
+DAY 2: label 「[Day2 區域/主題]」, illustrations: [Day2 主要景點插畫]. Food icon: [Day2 必吃美食小圖示]. Food label 「[Day2 必吃美食]」.
+DAY 3: label 「[Day3 區域/主題]」, illustrations: [Day3 主要景點插畫]. Food icon: [Day3 必吃美食小圖示]. Food label 「[Day3 必吃美食]」.
+DAY 4: label 「[Day4 區域/主題]」, illustrations: [Day4 主要景點插畫]. Food icon: [Day4 必吃美食小圖示]. Food label 「[Day4 必吃美食]」.
+DAY 5: label 「[Day5 區域/主題]」, illustrations: [Day5 主要景點插畫]. Food icon: [Day5 必吃美食小圖示]. Food label 「[Day5 必吃美食]」.
+DAY 6: label 「[Day6 區域/主題]」, illustrations: [Day6 主要景點插畫]. Food icon: [Day6 必吃美食小圖示]. Food label 「[Day6 必吃美食]」.
+DAY 7: label 「[Day7 區域/主題]」, illustrations: [Day7 主要景點插畫]. Food icon: [Day7 必吃美食小圖示]. Food label 「[Day7 必吃美食]」.
+
+Side information panels:
+Left side panel title: 「必吃美食清單」. Include cute illustrated icons and Traditional Chinese items, with dotted pastel connector lines to matching day circles: [列出每日必吃美食，例如：HARBS 千層蛋糕 to DAY 1, 海鮮 BBQ to DAY 2, 迴轉壽司 to DAY 3].
+
+Right side panel title: 「必喝飲品＋旅行小貼士」. Include icons and Traditional Chinese bullets: [列出必喝飲品，例如：冰咖啡、抹茶拿鐵、便利商店冰飲], [列出旅行小貼士，例如：Suica 嗶卡最方便、防曬＋雨具必備、花火日先卡位].
+
+Decoration along the road: small buildings, train tracks, torii gates, festival lanterns, local food icons, vending machine, cute clouds, summer sun, crescent moon, fireworks, waves, tiny family travelers. Each day uses a different pastel circle shade but feels harmonious. Make text legible and not crowded. Avoid any English labels except DAY 1 to DAY 7. No copyrighted characters or brand logos.
+```
+
+### 3. 每日行程地圖 Prompt (Daily Map)
 **提示詞（每天替換 `[ ]` 內的景點與圖示）**：
 ```text
 A hand-drawn kawaii illustration style travel journey map for DAY [填入天數, e.g., 1] in [填入目的地, e.g., Kyoto]. Morandi color palette, fresh and clean aesthetic. A winding rainbow gradient road with dashed branch lines for alternative routes. 
