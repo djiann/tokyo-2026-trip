@@ -14,7 +14,7 @@ OUTPUT = ROOT / "tokyo-2026-guide-mobile.html"
 IMAGE_MAP = {
     "overview.png": "overview.png",
     "day-01.png": "day-01.png",
-    "day-02.png": "day-02_org.png",
+    "day-02.png": "day-02.png",
     "day-03.png": "day-03.png",
     "day-04.png": "day-04.png",
     "day-05.png": "day-05.png",

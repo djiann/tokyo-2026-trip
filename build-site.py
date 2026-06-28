@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Build static site in docs/ for GitHub Pages (Safari-friendly HTTPS link)."""
+import re
 import shutil
 import subprocess
 import sys
@@ -26,6 +27,33 @@ WEB_BANNER_STYLE = """
 .web-ok{background:#e8f5ee!important;border-color:#2d8a62!important;color:#1a4a32!important}
 """
 
+MAP_NAMES = [
+    "overview.png",
+    *(f"day-{day:02d}.png" for day in range(1, 8)),
+]
+
+
+def use_external_map_images(html: str) -> str:
+    """GitHub Pages serves assets/ alongside HTML — use full-res PNG, not embedded JPEG."""
+    for name in MAP_NAMES:
+        html = re.sub(
+            rf'(<a[^>]*href="assets/{re.escape(name)}"[^>]*>\s*<img[^>]*src=")data:image/[^"]+(")',
+            rf"\1assets/{name}\2",
+            html,
+            count=1,
+        )
+        html = re.sub(
+            rf'(<img id="map-overview"[^>]*src=")data:image/[^"]+(")',
+            rf"\1assets/{name}\2",
+            html,
+            count=1,
+        ) if name == "overview.png" else html
+    html = html.replace(
+        ".map-img{width:100%;max-width:480px;",
+        ".map-link{display:block;line-height:0}.map-img{width:100%;max-width:960px;height:auto;",
+    )
+    return html
+
 
 def run_mobile_build() -> None:
     subprocess.run([sys.executable, str(ROOT / "build-mobile-guide.py")], check=True)
@@ -43,7 +71,7 @@ def build_docs() -> None:
     for name in [
         "overview.png",
         "day-01.png",
-        "day-02_org.png",
+        "day-02.png",
         "day-03.png",
         "day-04.png",
         "day-05.png",
@@ -51,13 +79,13 @@ def build_docs() -> None:
         "day-07.png",
     ]:
         src = ASSETS_SRC / name
-        dest_name = "day-02.png" if name == "day-02_org.png" else name
         if src.exists():
-            shutil.copy2(src, assets_dest / dest_name)
+            shutil.copy2(src, assets_dest / name)
 
     mobile = MOBILE_SRC.read_text(encoding="utf-8")
     mobile = mobile.replace(WEB_BANNER_OLD, WEB_BANNER_NEW)
     mobile = mobile.replace("</style>\n<script>", WEB_BANNER_STYLE + "</style>\n<script>", 1)
+    mobile = use_external_map_images(mobile)
     (DOCS / "index.html").write_text(mobile, encoding="utf-8")
 
     shutil.copy2(ROOT / "journey-maps.html", DOCS / "maps.html")
