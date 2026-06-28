@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>東京 7 日親子行 完整指南 2026/7/21–7/27（清新版）</title>
+<style>
+  :root{
+    --bg:#f6f4f0; --card:#ffffff; --card2:#faf8f5; --ink:#2a3238; --mut:#6b7a88;
+    --acc:#d4566a; --acc2:#3a8f9f; --ok:#2d8a62; --warn:#b87820; --line:#e6e1da;
+    --shadow:0 2px 12px rgba(42,50,56,.06); --shadow-lg:0 8px 28px rgba(42,50,56,.08);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans GB","Microsoft JhengHei",system-ui,sans-serif;
+    background:var(--bg);
+    background-image:
+      radial-gradient(ellipse 80% 50% at 100% -10%, rgba(212,86,106,.07), transparent),
+      radial-gradient(ellipse 60% 40% at 0% 100%, rgba(58,143,159,.06), transparent);
+    color:var(--ink);
+    line-height:1.7;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  header{
+    padding:32px 20px 24px;
+    background:linear-gradient(145deg,#fff 0%,#fdf6f4 45%,#f0f7f8 100%);
+    border-bottom:1px solid var(--line);
+    box-shadow:var(--shadow);
+  }
+  h1{margin:0 0 8px;font-size:23px;font-weight:700;color:var(--ink);letter-spacing:-.02em}
+  .sub{color:var(--mut);font-size:14px;line-height:1.55}
+  .wrap{max-width:880px;margin:0 auto;padding:0 16px 80px}
+  nav.toc{
+    position:sticky;top:0;z-index:20;
+    background:rgba(246,244,240,.92);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+    padding:10px 0;margin:0 -16px 20px;
+    overflow-x:auto;white-space:nowrap;
+    box-shadow:0 1px 0 rgba(255,255,255,.8);
+  }
+  nav.toc a{
+    display:inline-block;color:var(--acc2);text-decoration:none;font-size:13px;font-weight:500;
+    padding:6px 12px;background:#fff;border:1px solid var(--line);
+    border-radius:20px;margin:4px;box-shadow:0 1px 3px rgba(0,0,0,.04);
+    transition:background .15s,border-color .15s;
+  }
+  nav.toc a:hover{background:#f0f7f8;border-color:#b8d4da}
+  section{margin:24px 0}
+  h2{
+    font-size:19px;font-weight:700;
+    border-left:4px solid var(--acc);
+    padding-left:12px;margin:28px 0 14px;
+    scroll-margin-top:64px;color:var(--ink);
+  }
+  h3{font-size:16px;font-weight:600;color:var(--acc2);margin:18px 0 8px}
+  details{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:14px;margin:10px 0;padding:0 16px;
+    box-shadow:var(--shadow);overflow:hidden;
+  }
+  details[open]{padding-bottom:14px}
+  summary{
+    cursor:pointer;font-weight:600;padding:14px 0;
+    list-style:none;font-size:15px;color:var(--ink);
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"▸ ";color:var(--acc);font-size:13px}
+  details[open]>summary::before{content:"▾ "}
+  .card{
+    background:var(--card2);border:1px solid var(--line);
+    border-radius:12px;padding:14px 16px;margin:10px 0;
+  }
+  .pill{
+    display:inline-block;background:#eef2f5;color:var(--mut);
+    font-size:12px;padding:2px 10px;border-radius:20px;margin:2px 4px 2px 0;
+  }
+  .pill.t{background:#e8f4f6;color:#2a6f7d}
+  .pill.f{background:#fceef1;color:#b84a5c}
+  .pill.m{background:#e8f5ee;color:#2d7a55}
+  .pill.w{background:#fdf5e8;color:#9a6518}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0;display:block;overflow-x:auto;border-radius:10px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#f0f4f6;color:var(--acc2);font-weight:600;white-space:nowrap}
+  tr:nth-child(even) td{background:#fafafa}
+  a{color:var(--acc2);text-decoration:none;border-bottom:1px solid rgba(58,143,159,.25)}
+  a:hover{color:#2a6f7d;border-bottom-color:currentColor}
+  ul{padding-left:20px;margin:8px 0}
+  li{margin:5px 0}
+  .tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;margin-right:6px;letter-spacing:.02em}
+  .b{background:#e3f0f3;color:#2a6f7d}
+  .l{background:#e5f3eb;color:#2d7a55}
+  .d{background:#fce8ec;color:#b84a5c}
+  .warnbox{
+    background:#fff9ee;border:1px solid #f0ddb8;border-left:4px solid var(--warn);
+    border-radius:12px;padding:14px 16px;margin:10px 0;
+  }
+  .okbox{
+    background:#f0faf4;border:1px solid #c5e6d4;border-left:4px solid var(--ok);
+    border-radius:12px;padding:14px 16px;margin:10px 0;
+  }
+  .accbox{
+    background:linear-gradient(135deg,#fdf4f6,#f4f9fa);
+    border:1px solid #e8d4d8;border-left:4px solid var(--acc);
+    border-radius:12px;padding:14px 16px;margin:10px 0;
+  }
+  .time{color:var(--acc);font-weight:700;font-variant-numeric:tabular-nums}
+  .muted{color:var(--mut);font-size:13px}
+  .big{font-size:18px;font-weight:800;color:var(--ok)}
+  code{
+    background:#f0ece6;padding:2px 8px;border-radius:6px;
+    font-size:13px;color:#8a5a18;border:1px solid #e8e0d4;
+  }
+  hr{border:none;border-top:1px dashed var(--line);margin:18px 0}
+  .grid{display:grid;gap:10px}
+  @media(min-width:620px){.grid.two{grid-template-columns:1fr 1fr}}
+  .price{color:var(--ok);font-weight:700}
+  .footer{
+    color:var(--mut);font-size:12px;text-align:center;
+    padding:32px 0 16px;border-top:1px solid var(--line);margin-top:48px;
+  }
+  pre.prompt-pre{
+    white-space:pre-wrap;font-size:13px;line-height:1.55;
+    color:var(--ink);background:#fff;border:1px solid var(--line);
+    border-radius:10px;padding:14px;margin:0;
+  }
+  @media print{
+    body{background:#fff;color:#000;font-size:11pt;background-image:none}
+    nav.toc,.noprint{display:none}
+    header{background:#fff;box-shadow:none}
+    details{border:1px solid #ccc;box-shadow:none}
+    details>summary{font-size:12pt}
+    details:not([open])>*{display:block}
+    summary::before{content:""}
+    h2{color:#000;border-color:var(--acc)}
+    h3{color:#2a6f7d}
+    .card,.warnbox,.okbox,.accbox{background:#fafafa;border:1px solid #ddd;box-shadow:none}
+    a{color:#000;text-decoration:underline;border:none}
+    th{background:#eee;color:#000}
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>🗼 東京 7 日親子深度行・完整指南</h1>
+  <div class="sub">2026/7/21(二) – 7/27(一)　住宿：上野　｜　含寶可夢光雕秀 ×2、隅田川花火、每餐 3 備案、交通票券分析、預算、訂位清單</div>
+</header>
+
+<div class="wrap">
+
+<div class="noprint accbox" style="margin-top:14px">
+  🗺️ <b>冒險地圖</b>：開啟 <a href="maps.html"><b>旅程地圖（8 張插畫風）</b></a>，可存 PNG 帶著走。<br>
+  📱 <b>存成 PDF</b>：手機用 Safari/Chrome 開此檔 → 分享/列印 → <b>「儲存為 PDF」</b>。電腦 <code>Cmd/Ctrl+P</code> → 目的地選 PDF。列印時所有折疊區塊會自動展開。
+</div>
+<img src="assets/overview.png" alt="旅程總覽地圖" style="width:100%; max-width:480px; border-radius:16px; margin:16px auto; display:block; box-shadow:var(--shadow-lg);">
+
+<nav class="toc">
+  <a href="maps.html">🗺️ 冒險地圖</a>
+  <a href="#pre">行前必讀</a>
+  <a href="#ticket">交通票券</a>
+  <a href="#book">訂位預約清單</a>
+  <a href="#poke">寶可夢光雕秀</a>
+  <a href="#d1">Day1</a><a href="#d2">Day2</a><a href="#d3">Day3</a><a href="#d4">Day4</a><a href="#d5">Day5</a><a href="#d6">Day6</a><a href="#d7">Day7</a>
+  <a href="#save">省錢</a><a href="#app">APP</a><a href="#pack">打包</a><a href="#rain">雨天/緊急</a><a href="#photo">拍照</a><a href="#budget">總預算</a><a href="#check">Checklist</a><a href="#prompt">AI Prompt</a>
+</nav>
+
+<div class="muted">匯率以 <b>¥100 ≈ NT$21</b>（NT$1≈¥4.76）估算，出發前用 APP 抓即時匯率。所有營業時間/價格/門票會變動，<b>出發前務必再用 Google Maps 或官網確認當日營業與公休</b>。</div>
+
+<!-- ============ 行前必讀 ============ -->
+<section id="pre">
+<h2>① 行前必讀：入境・海關・必辦</h2>
+
+<details open>
+<summary>🛂 入境日本：Visit Japan Web（強烈建議出發前完成）</summary>
+<div class="card">
+<p>2026 年日本入境主要走 <b>Visit Japan Web</b>（VJW）線上預先登錄，現場掃 QR 走電子通關最快。</p>
+<ul>
+<li>網址：<a href="https://www.vjw.digital.go.jp/">vjw.digital.go.jp</a>（出發前 1～2 週註冊帳號、填好）</li>
+<li>需登錄：<b>入境審查（外國人入境記錄）</b> + <b>海關申報（攜帶品申報）</b>。完成後各產生一個 QR Code。</li>
+<li>需準備：護照、班機資訊、在日住宿地址電話（填上野飯店 Hotel Crown Hills Ueno Premier 地址即可）。</li>
+<li>現場：先掃「入境審查」QR + 拍照按指紋 → 領行李 → 過海關掃「海關申報」QR。</li>
+<li>備援：若 VJW 當機，仍可填寫紙本「入境卡 + 海關申報單」（機上空服員會發，建議拿一份備用）。</li>
+</ul>
+<p class="muted">※ 一家人可在同一帳號下建立多位同行家屬資料，小孩也要各自登錄。</p>
+</div>
+</details>
+
+<details>
+<summary>🧳 海關・行李・違禁品重點</summary>
+<div class="card">
+<ul>
+<li><b>免稅菸酒/購物額度</b>：酒 3 瓶、紙菸 200 支（合理個人用量內免稅）。一般家庭購物不會超標。</li>
+<li><b>嚴禁攜入</b>：新鮮肉品/肉製品（含真空包裝肉鬆、含肉泡麵調理包風險）、新鮮蔬果、部分種子。<b>台灣肉乾/貢丸/含肉零食不要帶</b>。</li>
+<li><b>藥品</b>：個人用成藥沒問題；處方藥多帶（>1 個月量）需「薬監証明」，一般旅遊用量免。</li>
+<li><b>現金申報</b>：攜帶等值 ¥100 萬以上現金需申報。</li>
+<li><b>回台</b>：日本買的水果、生鮮肉品同樣不能帶回台灣；藥妝/食品/電器 OK。台灣入境免稅額 NT$2 萬、菸酒有限量。</li>
+</ul>
+</div>
+</details>
+
+<details>
+<summary>📶 上網 / 網路（出發前先買）</summary>
+<div class="card">
+<ul>
+<li><b>最省心</b>：eSIM（如 Airalo / Ubigi / 各大電信日本上網 eSIM），落地自動連線，免換卡。iPhone XS 以後皆支援。</li>
+<li><b>多人共用</b>：一台 WiFi 分享器（Klook/KKday 機場領取或宅配台灣）給全家共用最划算。</li>
+<li>建議流量：每人 7 天 5–10GB；重度導航/影片選吃到飽。</li>
+<li>機場有免費 Wi-Fi 但不穩，<b>不要</b>靠它過 VJW 通關。</li>
+</ul>
+</div>
+</details>
+
+<details>
+<summary>💴 現金・支付・匯兌</summary>
+<div class="card">
+<ul>
+<li>東京八成場所可刷卡/嗶手機，但<b>祭典屋台、阿美橫町小攤、部分老店只收現金</b>，務必帶足現金（建議每人備 ¥2–3 萬零用 + 全家共同基金）。</li>
+<li>換匯：台灣端先換好日幣較佳；不足時用日本 <b>7-11 ATM / 郵局 ATM</b> 領現（海外提款手續費 + 設好磁條/晶片提款功能）。</li>
+<li>支付主力：<b>iPhone 綁定 Suica（見下節）</b>，搭車購物嗶一下最快。</li>
+<li>Visa/Master 信用卡保留一張（樂園、水族館、飯店押金用）。</li>
+</ul>
+</div>
+</details>
+
+<details>
+<summary>⚠️ 原行程「不足/要補」的重點檢查（我幫你抓出來）</summary>
+<div class="warnbox">
+<ul>
+<li><b>Day3 澀谷 SKY 必須提前 28 天搶日落黃金場</b>（16:30–17:00），否則只剩白天或很晚的場（見訂位清單）。</li>
+<li><b>Day4 / Day5 都用到 teamLab Planets</b> → <b>你只會去一次</b>，請二選一（建議放 Day4，因 Day4 動線豐洲市場→teamLab 最順）。Day5 行程本身沒排 teamLab，OK，但別重複買票。</li>
+<li><b>Day5 隅田川花火（7/25 六）= 全東京最擠的一天</b>：晴空塔商場、淺草押上站會交通管制。務必照原行程「步行回上野」，且 <b>17:00 後少喝水、先上廁所、先卡好野餐位</b>。雨天備案見緊急章節（花火遇荒天當天上午 8 點才宣布是否中止）。</li>
+<li><b>Day2 八景島是私鐵（金澤海岸線 Seaside Line），Suica 可刷</b>；One Day Pass 現場/官網買。確認當日海豚秀時間再排。</li>
+<li><b>豐洲市場壽司大/大和壽司清晨開賣、中午多半已收</b>：你 Day4 中午到，<b>壽司大未必還營業</b>，請以「海鮮丼/定食」店為主力（已在 Day4 補 3 備案）。</li>
+<li><b>Day3 邁泉炸豬排青山本店、Day3/Day1 HARBS</b>：熱門店午餐尖峰要嘛訂位、要嘛 11:00–11:30 前到。</li>
+<li><b>7 月底東京 33–36°C + 高濕</b>：每段戶外行程都要排「室內冷氣避暑點」，手持風扇、涼感巾、補水鹽錠必備（打包章節）。</li>
+<li><b>Skyliner 回程（Day7）建議 Day6 晚上先在京成上野站劃位買好</b>（原行程已提，讚）。</li>
+<li><b>小孩入居酒屋</b>：鳥貴族/大山/大統領晚間菸味/酒客多，帶小孩建議坐早場或選定食店。</li>
+</ul>
+</div>
+</details>
+</section>
+
+<!-- ============ 交通票券 ============ -->
+<section id="ticket">
+<h2>② 交通票券分析（含 vs 單次購票試算）</h2>
+
+<div class="okbox">
+<b>結論先講：本行程「不要買 JR Pass、不要買地鐵一日券」，主力用 Suica（西瓜卡）嗶到底 + Skyliner 來回票單買。</b>
+<br>理由：你全程在東京 23 區 + 橫濱/八景島來回，沒有跨城長途；而且每天都混用 JR + 東京地鐵 + 都營 + 私鐵（京成/東武/金澤海岸線），<b>任何單一公司的 Pass 都無法覆蓋</b>，硬買反而被綁死又更貴。
+</div>
+
+<details open>
+<summary>各票券比較表（價格・範圍・是否推薦）</summary>
+<table>
+<tr><th>票券</th><th>價格</th><th>使用範圍</th><th>本行程推薦?</th></tr>
+<tr><td><b>Suica / PASMO</b>（實體或 iPhone 綁定）</td><td>儲值制，無票價；iPhone 綁定免押金，實體卡 ¥500 押金</td><td><b>JR、地鐵、都營、私鐵、巴士、便利商店、自販機通通能嗶</b></td><td>✅ <b>主力，全程用它</b></td></tr>
+<tr><td>Welcome Suica（觀光客版）</td><td>免押金、效期 28 天</td><td>同 Suica</td><td>○ 沒 iPhone 綁卡時的實體替代</td></tr>
+<tr><td>京成 Skyliner 來回票</td><td>來回約 <b>¥4,480</b>（單程 ¥2,580；常有 Klook/KKday 折扣 ~¥4,300）</td><td>京成上野 ⇄ 成田機場 直達 41 分</td><td>✅ <b>單獨買來回，最省機場往返時間</b></td></tr>
+<tr><td>JR Pass 全國版</td><td>7 日約 ¥50,000</td><td>全日本 JR</td><td>❌ 沒跨城，完全浪費</td></tr>
+<tr><td>JR 東京都市地區通票（都區內 Pass）</td><td>¥760/日</td><td>東京 23 區內 JR 普通車一日無限</td><td>△ 只有 Day2/Day6 大量純 JR 移動的日子「可能」打平，但你還要搭地鐵/私鐵，不划算（見下試算）</td></tr>
+<tr><td>Tokyo Subway Ticket（24/48/72h）</td><td>¥800 / ¥1,200 / ¥1,500</td><td><b>只含</b>東京 Metro + 都營地鐵，<b>不含 JR、不含私鐵</b></td><td>△ 你 JR 用很兇，覆蓋不足；除非某天幾乎只搭地鐵（見 Day3 備案A/B）</td></tr>
+</table>
+<p class="muted">※ Skyliner 也可考慮「Skyliner + Tokyo Subway 24h 套票」，但你只有 Day3 偏地鐵，整體仍是 Suica 單嗶最彈性。</p>
+</details>
+
+<details>
+<summary>🧮 票券 vs 單次購票 試算（為什麼選 Suica）</summary>
+<div class="card">
+<p>各日地鐵/JR 嗶卡實際花費（估，IC 票價，單位日圓/人）：</p>
+<ul>
+<li>Day1：Skyliner 單程 2,580（來回票攤一半）+ 市區步行為主 → 當日約 <b>¥2,580</b></li>
+<li>Day2：上野⇄八景島來回 + Seaside Line ≈ <b>¥1,800–2,000</b></li>
+<li>Day3：上野⇄澀谷⇄新宿（光雕秀）⇄上野，混 JR/地鐵 ≈ <b>¥600–800</b></li>
+<li>Day4：上野→葛西臨海→豐洲→飯田橋（神樂坂）→上野 ≈ <b>¥900–1,100</b></li>
+<li>Day5：上野⇄晴空塔（東武）+ 步行 ≈ <b>¥600</b></li>
+<li>Day6：上野⇄品川⇄新宿（光雕秀）⇄上野 ≈ <b>¥900–1,100</b></li>
+<li>Day7：Skyliner 單程 2,580（來回票另一半）→ 約 <b>¥2,580</b></li>
+</ul>
+<p>👉 若改買 Subway Ticket 72h（¥1,500），你 Day2/Day4/Day6 的 JR 段全不能用，仍要另付 JR，等於「白花 ¥1,500」。<b>Suica 嗶卡 = 花多少算多少，最省。</b></p>
+<p class="big">7 日交通總計（含 Skyliner 來回）≈ ¥10,000–11,500 / 人（約 NT$2,100–2,400）</p>
+</div>
+</details>
+
+<details>
+<summary>📲 iPhone 綁定 Suica 步驟（出發前先設好）</summary>
+<div class="card">
+<ol>
+<li>iPhone「錢包 App」→ 右上「＋」→ 選「交通卡」→ <b>Suica</b>。</li>
+<li>用 Apple Pay（綁 Visa/Master）儲值，例如先充 ¥3,000。</li>
+<li>過閘門時整支手機靠感應區即可（快捷交通卡開啟後免解鎖、免開 App）。</li>
+<li>沒電也能嗶（iPhone XS 以上有電力儲備感應）。家裡每人一支手機各綁一張。</li>
+<li>沒 iPhone 的家人：機場/車站買實體 Welcome Suica。</li>
+</ol>
+</div>
+</details>
+</section>
+
+<!-- ============ 訂位預約清單 ============ -->
+<section id="book">
+<h2>③ 訂位 / 預約 / 報名清單（按急迫度排序）</h2>
+
+<div class="warnbox">🔴 = 一定要提前搶；🟡 = 建議先預約；🟢 = 現場即可。</div>
+
+<details open>
+<summary>🔴 必須提前搶（行程確定立刻訂）</summary>
+<table>
+<tr><th>項目</th><th>提前多久</th><th>怎麼訂</th><th>備註</th></tr>
+<tr><td><b>澀谷 SKY</b>（Day3）</td><td>參觀日 <b>28 天前</b>日本時間 00:00 開賣</td><td><a href="https://www.shibuya-scramble-square.com/sky/">官網</a> / Klook / KKday</td><td>想要日落+夜景 16:30–17:00 場，<b>開賣秒殺</b>，定鬧鐘搶</td></tr>
+<tr><td><b>teamLab Planets 豐洲</b>（Day4，二選一）</td><td>至少 <b>1 個月</b></td><td><a href="https://www.teamlab.art/e/planets/">官網</a> 指定時段電子票</td><td>涉水體驗，穿短褲/可捲褲管；旺季易售完</td></tr>
+<tr><td><b>墨田水族館</b>（Day5）</td><td>1–2 週，至少前一晚</td><td><a href="https://www.sumida-aquarium.com/">官網</a> / Klook 掃 QR 入場</td><td>花火日人潮爆，先買省排隊</td></tr>
+<tr><td><b>八景島 One Day Pass</b>（Day2）</td><td>建議前一晚線上</td><td><a href="https://www.seaparadise.co.jp/">官網</a> / KKday</td><td>確認當日海豚秀場次再排</td></tr>
+</table>
+</details>
+
+<details>
+<summary>🟡 建議先預約的餐廳（熱門/家庭優雅）</summary>
+<table>
+<tr><th>餐廳</th><th>哪天</th><th>訂位方式</th><th>最熱門時段</th></tr>
+<tr><td><b>邁泉炸豬排 青山本店</b>（まい泉）</td><td>Day3 備案C 午餐</td><td><a href="https://www.mai-sen.com/">官網</a> / <a href="https://www.tablecheck.com/">TableCheck</a> / Tabelog，建議提前 1–2 週；否則 11:00–11:30 前到排隊</td><td>12:00–13:30</td></tr>
+<tr><td><b>敘敘苑 / 燒肉陽山道 上野</b></td><td>Day2備案B / Day6 晚餐</td><td>電話或 <a href="https://www.hotpepper.jp/">Hot Pepper</a> / <a href="https://www.ikyu.com/">一休</a>；週末晚先訂</td><td>18:00–20:00</td></tr>
+<tr><td><b>高輪格蘭王子 Lounge Momiji 下午茶</b></td><td>Day6 下午茶</td><td><a href="https://www.princehotels.co.jp/takanawa/">官網</a> / 一休預約</td><td>14:00–16:00</td></tr>
+<tr><td><b>T.Y.HARBOR</b>（天王洲運河）</td><td>Day6 午餐備案</td><td><a href="https://www.tysons.jp/tyharbor/">官網</a> / TableCheck</td><td>午餐 12:00 假日要訂</td></tr>
+<tr><td>迴轉壽司 <b>壽司郎 / 魚べい</b>（澀谷）</td><td>Day3 晚餐</td><td>各自官方 App 抽號（切日本地區或用網頁版）；現場排常 >1hr</td><td>18:00–20:00</td></tr>
+</table>
+</details>
+
+<details>
+<summary>🟢 現場即可（不收訂位 / 排隊制）+ 體驗報名</summary>
+<div class="card">
+<ul>
+<li>HARBS 上野、Park Side Cafe、ecute 上野、豐洲千客萬來、壽司大/大和壽司、晴空塔 Toriton：<b>現場排隊制</b>，靠「提早到 / 派人先排」。</li>
+<li><b>寶可夢光雕秀（都廳）</b>：免費、免預約、直接去都民廣場站著看（Day3、Day6）。</li>
+<li><b>祭典（上野夏祭/神樂坂阿波舞/隅田川花火）</b>：免報名，免費入場（花火付費觀覽席才需 5/10 起搶協贊席，自由區免費）。</li>
+<li>想加的體驗：<b>和服體驗（淺草）</b>建議線上預約（VASARA / 七緒），夏天可選浴衣，剛好配祭典（Day5 晴空塔/淺草、或 Day1 上野）。茶道體驗多在淺草/銀座，提前 3–7 天網路報名。</li>
+</ul>
+</div>
+</details>
+</section>
+
+<!-- ============ 寶可夢光雕秀 ============ -->
+<section id="poke">
+<h2>④ 🟡 寶可夢光雕秀 ×2（已幫你插入 Day3 平日 + Day6 週末）</h2>
+<div class="accbox">
+<b>「ポケモンカードゲーム TOKYO LUMINOUS NIGHT」</b>（寶可夢卡 30 週年光雕秀）<br>
+📍 東京都廳第一本廳舍 東側壁面 ／ 觀賞點：<b>都民廣場</b>（新宿區西新宿 2-8-1）<br>
+💴 <b>完全免費、免預約</b>，原則上每天上映（荒天中止）<br>
+🕖 7 月夏季場次：<b>19:30 / 20:00 / 20:30 / 21:00 / 21:30</b>（每場約 15 分，最後約 21:45 結束）<br>
+🚇 最近站：都營大江戶線「<b>都廳前站</b>」直結；或 JR「新宿站」西口走 ~10 分<br>
+🔗 當日 TIMETABLE / 即時音樂：<a href="https://tokyoprojectionmappingproject.jp/">tokyoprojectionmappingproject.jp</a>
+</div>
+<div class="warnbox">
+⚠️ 重點：寶可夢只是<b>輪播作品之一</b>，並非每個整點都播寶可夢（同時段還輪播哥吉拉、BLUE LOCK、孤獨搖滾、PAC-MAN 等）。<b>出發前/當天上官網 TIMETABLE 對準「寶可夢場次」再去</b>。<b>週末（含 Day6 週日）同場有超人氣哥吉拉光雕秀</b>，等於一次看兩種，週末去最賺。
+</div>
+</section>
+
+<!-- ============================= DAY 1 ============================= -->
+<section id="d1">
+<h2>Day 1｜7/21(二)　抵達・上野下午茶・夏日祭典</h2>
+<div class="muted">住宿：上野（Hotel Crown Hills Ueno Premier）　主題：輕鬆收心、在地祭典</div>
+<img src="assets/day-01.png" alt="Day 1 旅程地圖" style="width:100%; max-width:480px; border-radius:16px; margin:16px auto; display:block; box-shadow:var(--shadow-lg);">
+
+<details open>
+<summary>🕒 時間表 + 交通路線</summary>
+<div class="card">
+<p><span class="time">12:25</span> 成田機場 T1/T2 入境、領行李、過海關（VJW 掃碼）。<br>
+<span class="muted">↳ 抓 90 分鐘緩衝：入境＋領李＋買 Skyliner 票，14:00 前上車合理。</span></p>
+<p><span class="time">~13:30</span> <b>京成 Skyliner</b>：成田機場站 → 京成上野站，<b>直達不轉車 41 分</b>，¥2,580（建議買來回 ¥4,480）。<br>
+<span class="muted">↳ Skyliner 對號座，行李架夠大。</span></p>
+<p><span class="time">14:30</span> 京成上野站步行 5–8 分 → 飯店 Check-in / 寄行李。</p>
+<p><span class="time">15:00</span> 下午茶 <b>HARBS 上野店</b>（PARCO_ya 2F，飯店步行 5–10 分）。</p>
+<p><span class="time">16:30</span> 阿美橫町逛街（步行 5 分）。</p>
+<p><span class="time">18:00</span> 上野恩賜公園 & 不忍池散步（賞夏季蓮花）。</p>
+<p><span class="time">18:45</span> 晚餐（見下）。</p>
+<p><span class="time">19:30</span> <b>うえの夏まつり</b>（不忍池水上音樂堂周邊屋台、燈籠）。</p>
+<p><span class="time">21:00</span> 步行回飯店。</p>
+<p><b>本日交通全程步行</b>（飯店↔PARCO_ya↔阿美橫町↔不忍池皆 5–15 分）。</p>
+</div>
+</details>
+
+<details>
+<summary>🍽️ 三餐 ×3 備案</summary>
+<div class="card">
+<p><span class="tag b">下午茶</span><b>① HARBS 上野店</b>（ハーブス）<span class="pill">PARCO_ya 2F</span></p>
+<ul>
+<li>地址：台東区上野3-24-6 PARCO_ya 2F｜最近站：JR/地鐵 上野・御徒町｜Maps 關鍵字：<code>HARBS PARCO_ya 上野</code></li>
+<li>必點：<b>水果千層 Mille Crepes</b> + 熱紅茶｜約 ¥1,500–2,000/人</li>
+<li>規定：<b>每人低消一杯飲品</b>（蛋糕不計低消）；平日午後仍可能小排，翻桌快。<b>不收訂位</b>。</li>
+</ul>
+<p>替代：<b>② 廚 otto e sette（少觀光客的甜點）</b> 或 <b>③ 上野 みはし（あんみつ蜜豆冰，在地老店）</b><span class="pill">本店 上野公園口前</span>，夏天吃白玉餡蜜超消暑，¥800–1,200。</p>
+<hr>
+<p><span class="tag d">晚餐</span><b>① 鳥貴族 上野店</b>（均一價串燒居酒屋）</p>
+<ul>
+<li>全品均一價（約 ¥360 前後）｜¥1,500–2,000/人｜<b>現場候位</b>｜帶小孩建議坐早場、靠角落。</li>
+</ul>
+<p><b>② 在地推薦・少觀光客</b>：<b>とんかつ 山家（やまべ）御徒町</b> — 排隊在地炸豬排，份量大 CP 高，¥1,000–1,500，<b>不訂位</b>，Maps：<code>とんかつ山家 御徒町</code>。</p>
+<p><b>③ 親子安全牌</b>：<b>阿美橫町「みなとや」/ 海鮮丼小店 or 一蘭/天丁屋天婦羅</b>，¥1,000–1,800，現場排。</p>
+<p class="muted">屋台小吃（炒麵/章魚燒/蘋果糖）可在夏祭直接解決晚餐，¥1,500 內吃飽，<b>記得帶現金</b>。</p>
+</div>
+</details>
+
+<details>
+<summary>💴 Day1 預算（/人）</summary>
+<div class="card">
+Skyliner 來回攤半 <span class="price">¥2,580</span>（NT$540）＋下午茶 <span class="price">¥1,800</span>＋晚餐 <span class="price">¥2,000</span>＝<b class="big">約 ¥6,380（NT$1,340）</b>
+<br><span class="muted">＋阿美橫町零食/藥妝視採買另計。</span>
+</div>
+</details>
+</section>
+
+<!-- ============================= DAY 2 ============================= -->
+<section id="d2">
+<h2>Day 2｜7/22(三)　橫濱八景島海洋之夢（雙備案傍晚）</h2>
+<div class="muted">住宿：上野（不換）　主題：大型水族館避暑 + 遊樂設施</div>
+<img src="assets/day-02.png" alt="Day 2 旅程地圖" style="width:100%; max-width:480px; border-radius:16px; margin:16px auto; display:block; box-shadow:var(--shadow-lg);">
+
+<details open>
+<summary>⏰ 營業時間與設施維修注意事項</summary>
+<div class="card">
+<ul>
+<li><b>全島開放時間</b>：08:30 – 21:30（入島免費）</li>
+<li><b>水族館區 (Aqua Resorts)</b>：10:00 – 20:00（暑假期間通常會延長營業，最終入館為閉館前 30 分鐘）</li>
+<li><b>遊樂設施 (Pleasure Land)</b>：11:00 – 20:00</li>
+<li><b>⚠️ 維修與停駛注意</b>：
+  <ul>
+  <li>遊樂設施（如波浪雲霄飛車、急流泛舟）若遇強風、大雨或雷雨會<b>隨時暫停營運</b>。</li>
+  <li>各設施的「定期保養點檢日」通常會在前一個月於官網公佈。<b>強烈建議出發前下載「八景島官方 APP」</b>，APP 內不僅有<b>即時 GPS 園區地圖與 AR 導航</b>，還能看到當天所有設施的<b>即時排隊等待時間</b>與<b>維修停開狀況</b>。</li>
+  </ul>
+</li>
+</ul>
+</div>
+</details>
+
+<details open>
+<summary>🗺️ 推薦遊玩順序與詳細攻略表</summary>
+<table>
+<tr><th>時間</th><th>推薦行程與設施</th><th>攻略與排隊注意事項</th></tr>
+<tr><td><b>08:30 - 10:00</b></td><td><b>【交通與入園】</b><br>上野出發 → 八景島站</td><td>搭乘 Seaside Line 抵達。入島後先去售票處或自動取票機，將 Klook/KKday 買好的 QR Code 換成「一日通票手環」。(預估排隊：10-15分)</td></tr>
+<tr><td><b>10:00 - 11:30</b></td><td><b>【水族博物館 Aqua Museum】</b><br>必看：5萬隻沙丁魚幻覺舞</td><td>這是全日本最大水族館。<b>10:30 有沙丁魚燈光秀</b>，請於 10:15 提早到 1F 或 2F 大水槽前卡位。看完後順著動線看北極熊與海象。</td></tr>
+<tr><td><b>11:30 - 12:00</b></td><td><b>【海豚夢幻館 Dolphin Fantasy】</b><br>海底隧道拍美照</td><td>無屋頂的拱型水槽，陽光灑下非常夢幻。採走動式參觀，不需排隊，但等空景拍照約需 5-10 分鐘。</td></tr>
+<tr><td><b>12:00 - 13:00</b></td><td><b>【午餐】Seafood & Grill YAKIYA</b><br>海鮮 BBQ 吃到飽</td><td><b>⚠️ 關鍵戰略</b>：暑假 12:30 後餐廳會大排長龍，<b>務必在 12:00 前入座</b>！自己烤海鮮很有夏日感。若想吃快點，可改去旁邊的美食廣場吃拉麵。</td></tr>
+<tr><td><b>13:00 - 14:00</b></td><td><b>【海洋動物表演秀】</b><br>地點：Aqua Stadium</td><td><b>⚠️ 關鍵戰略</b>：下午場次通常在 13:30，但暑假人多，<b>13:00 就要進場找位子</b>。前三排是「濕身區」，不想被海豚潑水請坐第四排以後。</td></tr>
+<tr><td><b>14:00 - 15:30</b></td><td><b>【海洋親密館 Fureai Lagoon】</b><br>近距離看企鵝、摸海豚</td><td>入場需聽 5 分鐘規則解說。若想參加「跟水獺握手」或「摸小白鯨」，<b>必須當天一早就在 AsoView 網站搶預約名額</b>，現場無法加購。</td></tr>
+<tr><td><b>15:30 - 18:00</b></td><td><b>【遊樂島 Pleasure Land】</b><br>玩戶外遊樂設施</td><td>下午稍涼適合玩戶外：<br>1. <b>波浪雲霄飛車</b> (衝出海面，排隊約 40 分)<br>2. <b>急流泛舟</b> (夏天必玩微濕，排隊約 40 分)<br>3. <b>海島觀覽塔</b> (吹冷氣看夕陽，排隊約 15 分)</td></tr>
+<tr><td><b>18:00 - 19:00</b></td><td><b>【晚餐與伴手禮】</b><br>海灣市場 Bay Market</td><td>玩完設施後，到 Bay Market 買白鯨娃娃伴手禮，吃個可麗餅或簡單晚餐。</td></tr>
+<tr><td><b>19:00 ~</b></td><td><b>【賦歸】</b><br>八景島 → 上野</td><td>避開閉園 21:00 的大散場人潮，提早搭車回上野飯店休息。</td></tr>
+</table>
+</details>
+
+<details>
+<summary>🚆 交通路線與傍晚備案</summary>
+<div class="card">
+<p><span class="time">07:30</span> 早餐：上野站 <b>ecute / Andersen 麵包</b> 外帶，車上吃。</p>
+<p><b>去程</b>：JR 上野站 →（<b>京濱東北線 / 上野東京線</b>）→ JR 橫濱站 →（<b>JR 根岸線</b>）→ JR 新杉田站 →（<b>金澤海岸線 Seaside Line</b>，Suica 可刷）→ <b>八景島站</b>。約 75–90 分。</p>
+<p><b>回程</b>：18:00 後離開八景島，<b>依體力二擇一</b>：</p>
+<p><b>備案 A（東京車站）</b>：回新杉田 → 根岸線直通京濱東北線 → JR 東京站。19:30 拍紅磚站舍/廣場 → 東京車站地下街晚餐 → 東京一番街（寶可夢/吉卜力）→ JR 山手線回上野。</p>
+<p><b>備案 B（直接回上野）</b>：同一班車一路睡到 JR 上野站 → 飯店休息 → 阿美橫町（二木の菓子採買）→ 上野晚餐 → 回飯店。</p>
+<p class="okbox" style="margin-top:8px">💡 兩備案路線完全重疊，<b>上車後再問家人決定在哪站下車</b>。買多了紀念品 → 東京站置物櫃寄放再逛地下街。</p>
+</div>
+</details>
+
+<details>
+<summary>🍽️ 三餐 ×3 備案</summary>
+<div class="card">
+<p><span class="tag b">早餐</span>① ecute 上野 <b>Andersen</b> 麵包＋咖啡；② <b>Beck's Coffee</b>（站內，早 7:00）熱壓三明治；③ 便利商店飯糰+關東煮（車上吃，¥500 內）。</p>
+<hr>
+<p><span class="tag l">午餐（園內）</span>① 海鮮 BBQ（Bayside）；② 室內美食街丼飯/拉麵；③ 速食/輕食攤（帶小孩最快）。¥1,500–2,500/人。<b>旺季中午排隊，11:50 前先卡位</b>。</p>
+<hr>
+<p><span class="tag d">晚餐</span></p>
+<p><b>備案 A 東京站地下街</b>：① <b>東京拉麵街</b>「六厘舍沾麵 / 斑鳩」；② <b>黑塀橫丁</b>和食割烹；③ 大丸百貨 B1 デパ地下熟食外帶。¥1,500–2,500，現場排。Maps：<code>東京ラーメンストリート</code>。</p>
+<p><b>備案 B 上野</b>：① <b>燒肉陽山道</b>（要訂）；② <b>大統領</b>（阿美橫町鐵道下在地居酒屋，馬肉串知名，現場排）；③ <b>とんかつ蓬莱屋</b>（上野老字號炸豬排，少觀光客，¥2,000，不訂位）。</p>
+</div>
+</details>
+
+<details>
+<summary>💴 Day2 預算（/人）</summary>
+<div class="card">
+交通 <span class="price">¥1,900</span>（NT$400）＋八景島 One Day Pass <span class="price">¥5,600</span>（約 NT$1,180）＋午餐 <span class="price">¥2,000</span>＋晚餐 <span class="price">¥2,200</span>＝<b class="big">約 ¥11,700（NT$2,460）</b>
+<br><span class="muted">※ 八景島 Pass 大人約 ¥5,600、兒童約 ¥4,000，依官網。只想看水族館可買單館券省錢。</span>
+</div>
+</details>
+</section>
+
+<!-- ============================= DAY 3 ============================= -->
+<section id="d3">
+<h2>Day 3｜7/23(四)　三備案 ＋ ⭐平日寶可夢光雕秀</h2>
+<div class="muted">住宿：上野　主題：知性/購物/夜景，晚間插入都廳光雕秀</div>
+<img src="assets/day-03.png" alt="Day 3 旅程地圖" style="width:100%; max-width:480px; border-radius:16px; margin:16px auto; display:block; box-shadow:var(--shadow-lg);">
+
+<div class="accbox">⭐ <b>本日傍晚已幫你插入「寶可夢光雕秀」</b>：三個備案傍晚都會到澀谷，<b>澀谷 → 新宿（JR 山手線 6 分）→ 都民廣場</b>，看 21:00 或 21:30 場 → 新宿 → 上野（JR ~25 分 / 或大江戶線+轉乘）。</div>
+
+<details open>
+<summary>備案 A：上野在地知性 + 澀谷夜景（最省力）</summary>
+<div class="card">
+<p><span class="time">09:30</span> 上野動物園（飯店步行 10–15 分）。</p>
+<p><span class="time">13:00</span> 國立科學博物館（動物園出口步行 5 分）。</p>
+<p><span class="time">15:30</span> 地鐵 <b>銀座線</b> 上野→澀谷（28 分，上野是起點易有座）。</p>
+<p><span class="time">16:30</span> 澀谷 SKY（Scramble Square 頂樓，直達電梯）。</p>
+<p><span class="time">18:30</span> 晚餐（澀谷迴轉壽司，見下）。</p>
+<p><span class="time">20:00</span> MEGA 唐吉訶德澀谷（步行 5–8 分）。</p>
+<p>⭐ <span class="time">20:40</span> JR 澀谷→新宿（6 分）→ 都民廣場看 <b>21:00/21:30 寶可夢光雕秀</b>。</p>
+<p><span class="time">~22:00</span> 新宿→上野（JR 山手線約 25 分）回飯店。</p>
+</div>
+</details>
+
+<details>
+<summary>備案 B：豐洲 teamLab + 葛西水族園 + 東京鐵塔</summary>
+<div class="card">
+<p class="warnbox">⚠️ 此備案的 teamLab 與 <b>Day4 teamLab 重複</b>，二擇一。若選此案，Day4 就不要再排 teamLab。</p>
+<p><span class="time">08:45</span> 上野→有樂町→（有樂町線）豐洲（~25 分）→ teamLab Planets。</p>
+<p><span class="time">12:00</span> 豐洲千客萬來午餐。<span class="time">14:00</span> 豐洲→新木場→（JR 京葉線）葛西臨海公園（~15 分）水族園。</p>
+<p><span class="time">17:00</span> 京葉線→八丁堀→（日比谷線）神谷町（~25 分）→ 東京鐵塔。</p>
+<p>⭐ 若要光雕秀：鐵塔後改 日比谷線→霞ケ関→丸ノ内線→新宿，看 21:00/21:30 場，再回上野。（不看則 21:00 日比谷線直達上野）</p>
+</div>
+</details>
+
+<details>
+<summary>備案 C：明治神宮 + 表參道 + 澀谷雙塔夜景（經典打卡）</summary>
+<div class="card">
+<p><span class="time">08:30</span> JR 上野→（山手線內環）原宿（~28 分）。<span class="time">09:00</span> 明治神宮。</p>
+<p><span class="time">13:30</span> 表參道/貓街步行至澀谷（30–40 分）。<span class="time">16:30</span> 澀谷 SKY。</p>
+<p>⭐ <span class="time">19:30</span> 澀谷→新宿都民廣場看 <b>19:30/20:00 寶可夢光雕秀</b> → 晚餐新宿 → 回上野。<br>（原案的東京鐵塔可省，光雕秀替代夜景；想兩個都要則光雕秀看完再轉赤羽橋看鐵塔較趕，建議擇一）</p>
+</div>
+</details>
+
+<details>
+<summary>🍽️ 三餐 ×3 備案</summary>
+<div class="card">
+<p><span class="tag b">早餐</span>① 飯店；② ecute 上野麵包；③ 原宿/澀谷 站前咖啡（備案C 路上）。</p>
+<hr>
+<p><span class="tag l">午餐</span></p>
+<p><b>① Park Side Cafe</b>（上野公園內，備案A）— 露台景觀，¥1,500–2,500，<b>不訂位、11:30 前到</b>。Maps：<code>パークサイドカフェ 上野</code>。</p>
+<p><b>② 邁泉炸豬排 まい泉 青山本店</b>（備案C，少觀光客的本店）— 炸豬排三明治/里肌定食，¥1,800–3,000，<b>強烈建議 TableCheck 提前 1–2 週訂位</b>，否則 11:30 前排。</p>
+<p><b>③ 豐洲千客萬來海鮮丼</b>（備案B）— 現場排，¥2,000–3,500。</p>
+<hr>
+<p><span class="tag d">晚餐（澀谷）</span></p>
+<p><b>① 魚べい（Uobei）澀谷道玄坂</b> — 平板點餐、軌道送餐，小孩超愛，¥1,000–1,800，<b>App 抽號</b>。</p>
+<p><b>② 壽司郎 澀谷</b> — 同上，App 抽號。</p>
+<p><b>③ 在地推薦・少觀光客</b>：<b>つけ麵 五ノ神製作所 / 鳥升（澀谷在地居酒屋）</b>；或新宿光雕秀後吃 <b>新宿 思い出橫丁（回憶橫丁）串燒</b>，¥1,500–2,500。</p>
+</div>
+</details>
+
+<details>
+<summary>💴 Day3 預算（/人，以備案A估）</summary>
+<div class="card">
+交通 <span class="price">¥700</span>（含新宿來回，NT$150）＋門票（動物園¥600+科博¥630+澀谷SKY¥2,500）<span class="price">¥3,730</span>＋餐食 <span class="price">¥4,500</span>＝<b class="big">約 ¥8,930（NT$1,875）</b>
+<br><span class="muted">光雕秀免費。備案B/C門票/餐費略高（teamLab ¥3,800、東京鐵塔大瞭望台 ¥1,200）。</span>
+</div>
+</details>
+</section>
+
+<!-- ============================= DAY 4 ============================= -->
+<section id="d4">
+<h2>Day 4｜7/24(五)　葛西水族園・豐洲市場・teamLab・神樂坂阿波舞</h2>
+<div class="muted">住宿：上野　主題：海洋 + 頂級海鮮 + 沉浸藝術 + 夏祭</div>
+<img src="assets/day-04.png" alt="Day 4 旅程地圖" style="width:100%; max-width:480px; border-radius:16px; margin:16px auto; display:block; box-shadow:var(--shadow-lg);">
+
+<div class="warnbox">⚠️ <b>teamLab 只去一次</b>：建議放今天（豐洲市場→teamLab 步行 ~10 分最順）。若 Day3 已去 teamLab，今天就改下午直接神樂坂或加排淺草。</div>
+
+<details open>
+<summary>🕒 時間表 + 交通路線</summary>
+<div class="card">
+<p><span class="time">08:30</span> 上野出發。</p>
+<p><b>路線</b>：JR 上野→（京葉線方向，經東京站轉京葉線）<b>葛西臨海公園站</b>。<span class="muted">（或上野→八丁堀→京葉線）</span></p>
+<p><span class="time">09:30–11:30</span> 葛西臨海水族園（谷口吉生玻璃圓頂，鮪魚迴游缸）。</p>
+<p><span class="time">11:30</span> 葛西臨海公園→（京葉線）新木場→（有樂町線）<b>市場前站 / 豐洲</b>，~20–30 分。</p>
+<p><span class="time">12:00–13:30</span> 豐洲市場午餐（見下）。</p>
+<p><span class="time">14:00–16:00</span> <b>teamLab Planets</b>（市場步行 10–15 分或百合鷗線一站）。涉水消暑。</p>
+<p><span class="time">16:30</span> 有樂町線直達 <b>飯田橋站</b>（~20 分）→ 神樂坂。</p>
+<p><span class="time">17:30</span> 神樂坂散步 + 晚餐。</p>
+<p><span class="time">19:00–21:00</span> <b>神樂坂まつり 阿波舞大會</b>（注意：阿波舞通常在 7 月下旬週五六，<b>出發前查當年確切日期</b>，若非 7/24 則改安排其他夏祭或晴空塔）。</p>
+</div>
+</details>
+
+<details>
+<summary>🍽️ 三餐 ×3 備案</summary>
+<div class="card">
+<p><span class="tag b">早餐</span>① 飯店；② 上野站便利商店車上吃；③ 葛西臨海公園站前輕食。</p>
+<hr>
+<p><span class="tag l">午餐（豐洲市場）</span></p>
+<p class="muted">⚠️ 壽司大/大和壽司清晨開賣，<b>中午多半已賣完/收攤</b>，別硬等。以下以「中午仍營業」為主：</p>
+<p><b>① 仲家（Nakaya）海鮮丼</b> — 食材堆疊如珠寶盒、上菜快，¥2,500–3,500，現場排。</p>
+<p><b>② 天房（天婦羅）/ 八千代（炸物定食）</b> — 市場老店，¥2,000–3,000，現場排。</p>
+<p><b>③ 寿司大 / 大和寿司</b>（若還在排得到）— 頂級握壽司 ¥4,000–6,000，<b>需早到、輪流排</b>。<br>備援：管理設施棟 1F 任何掛「海鮮丼/定食」招牌的店，職人等級不踩雷。Maps：<code>豊洲市場 管理施設棟 飲食</code>。</p>
+<hr>
+<p><span class="tag d">晚餐（神樂坂，少觀光客的法日小巷）</span></p>
+<p><b>① 茶寮 / 神樂坂 鳥茶屋（親子丼・烏龍壽喜燒）</b> — 老舖氛圍，¥2,000–3,500，<b>建議電話/網路訂位</b>。</p>
+<p><b>② 神樂坂 蕎麦（手打蕎麥）</b> — 清爽，小孩友善，¥1,200–2,000，現場。</p>
+<p><b>③ 法式小酒館（神樂坂法國村）</b> — 想吃好一點，¥3,000+，假日/祭典日<b>務必訂位</b>。</p>
+<p class="muted">祭典當晚也可直接吃屋台炒麵/烤雞串解決。</p>
+</div>
+</details>
+
+<details>
+<summary>💴 Day4 預算（/人）</summary>
+<div class="card">
+交通 <span class="price">¥1,000</span>（NT$210）＋門票（水族園¥700+teamLab¥3,800）<span class="price">¥4,500</span>＋午餐 <span class="price">¥3,000</span>＋晚餐 <span class="price">¥2,500</span>＝<b class="big">約 ¥11,000（NT$2,310）</b>
+</div>
+</details>
+</section>
+
+<!-- ============================= DAY 5 ============================= -->
+<section id="d5">
+<h2>Day 5｜7/25(六)　晴空塔科技・墨田水族館・🎆隅田川花火</h2>
+<div class="muted">住宿：上野　主題：室內冷氣避暑 + 日本最具代表性花火（19:00–20:30 確定）</div>
+<img src="assets/day-05.png" alt="Day 5 旅程地圖" style="width:100%; max-width:480px; border-radius:16px; margin:16px auto; display:block; box-shadow:var(--shadow-lg);">
+
+<div class="warnbox">🔴 <b>全程最擠的一天</b>：花火 7/25(六) 19:00–20:30，約 2 萬發。晴空塔/淺草/押上會交通管制。<b>17:00 後少喝水、先上廁所、先卡野餐位、煙火後步行回上野（約 30 分）別擠車站</b>。荒天時當天上午 8 點宣布是否中止。</div>
+
+<details open>
+<summary>🕒 時間表 + 交通路線</summary>
+<div class="card">
+<p><span class="time">08:00–09:00</span> 早餐（飯店 / 上野站 Doutor）。</p>
+<p><b>路線</b>：上野→（地鐵銀座線）淺草→（東武晴空塔線 1 站）<b>東京晴空塔站 / 押上</b>，~15 分，出站直結商場。</p>
+<p><span class="time">09:30–11:30</span> 晴空塔 8F 千葉工業大學展示區（免費，機器人/女武神模型）＋ 9F 郵政博物館（大人¥300）。</p>
+<p><span class="time">12:00–13:30</span> 午餐 Solamachi（見下，11:00 前取號）。</p>
+<p><span class="time">13:30–16:00</span> 墨田水族館（5F/6F，企鵝/水母，<b>先網路購票掃 QR</b>）。</p>
+<p><span class="time">16:00–17:30</span> 步行至隅田公園屋台街卡位（10–15 分）。</p>
+<p><span class="time">19:00–20:30</span> 🎆 隅田川花火大會。</p>
+<p><span class="time">~20:40</span> 沿淺草通<b>步行回上野（約 30 分）</b>，避開管制人潮。</p>
+</div>
+</details>
+
+<details>
+<summary>🌅 上午備案（二擇一，皆可接 12:00 晴空塔午餐）</summary>
+<div class="card">
+<p><b>備案一・國立科學博物館</b>（上野公園內步行即達，恐龍/工業史，冷氣強）09:30–11:30 → 地鐵到晴空塔。大人 ¥630，高中以下免費。</p>
+<p><b>備案二・淺草文化觀光中心 + 隅田川晨散</b>（隈研吾設計，頂樓<b>免費展望台</b>俯瞰仲見世+晴空塔合照）→ 步行過隅田川到晴空塔。免費。</p>
+</div>
+</details>
+
+<details>
+<summary>🍽️ 三餐 ×3 備案</summary>
+<div class="card">
+<p><span class="tag b">早餐</span>① 飯店；② 上野站 Doutor/Egg's Thing 鬆餅；③ 便利商店。</p>
+<hr>
+<p><span class="tag l">午餐（晴空塔 Solamachi）</span></p>
+<p><b>① 迴轉壽司 トリトン Toriton</b>（6F，北海道直送高 CP）— ¥2,000–3,000，<b>11:00 前到取號最關鍵</b>。Maps：<code>回転寿司トリトン ソラマチ</code>。</p>
+<p><b>② 利久牛舌</b>（6/7F）— 仙台牛舌定食，¥2,000–2,800，11:00 前進店免久候。</p>
+<p><b>③ 美食街讚岐烏龍/炸豬排</b> — 最快，¥1,200–1,800。</p>
+<hr>
+<p><span class="tag d">晚餐（花火野餐）</span></p>
+<p class="warnbox">🚫 <b>切勿在花火當晚訂餐廳</b>（管制+爆滿）。建議：</p>
+<p><b>① Solamachi B1 超市（Food Marche）</b> <b>15:00 前</b>買冷便當/壽司/飲料/水果，會場直接野餐。</p>
+<p><b>② 沿途屋台</b>：炒麵、章魚燒、蘋果糖、烤雞串（帶現金）。</p>
+<p><b>③ 便利商店預購</b>：御飯糰/炸雞/冰飲（會場附近超商會被掃空，<b>提早買</b>）。</p>
+</div>
+</details>
+
+<details>
+<summary>💴 Day5 預算（/人）</summary>
+<div class="card">
+交通 <span class="price">¥600</span>（NT$126）＋門票（郵政博¥300+墨田水族館¥2,500）<span class="price">¥2,800</span>＋午餐 <span class="price">¥2,500</span>＋花火野餐 <span class="price">¥2,000</span>＝<b class="big">約 ¥7,900（NT$1,660）</b>
+</div>
+</details>
+</section>
+
+<!-- ============================= DAY 6 ============================= -->
+<section id="d6">
+<h2>Day 6｜7/26(日)　品川海洋聲光 ＋ ⭐週末寶可夢光雕秀(+哥吉拉)</h2>
+<div class="muted">住宿：上野　主題：品川水族館日間秀 + 都廳週末光雕秀 + 上野收尾</div>
+<img src="assets/day-06.png" alt="Day 6 旅程地圖" style="width:100%; max-width:480px; border-radius:16px; margin:16px auto; display:block; box-shadow:var(--shadow-lg);">
+
+<div class="accbox">⭐ <b>週末光雕秀整合</b>：原案晚上「再進水族館看夜間秀」改成 <b>只看日間秀</b>，傍晚 <b>JR 品川→新宿（湘南新宿線/直達約 13–18 分）</b> 看 <b>寶可夢 + 哥吉拉（週末限定）</b> 光雕秀，再 新宿→上野 吃晚餐。週末去都廳=一次看兩種光雕秀，最賺。</div>
+
+<details open>
+<summary>🕒 時間表 + 交通路線</summary>
+<div class="card">
+<p><span class="time">09:30</span> 飯店步行至 JR 上野站。</p>
+<p><span class="time">10:00–11:30</span> 晨間微調：JR 上野→（山手線）品川→（京急本線 1 站）北品川/新馬場 → <b>品川神社</b>（雙龍鳥居、品川富士）+ 舊東海道品川宿商店街。</p>
+<p><span class="time">12:00–13:30</span> 午餐（見下）。</p>
+<p><span class="time">13:30–16:00</span> <b>Maxell Aqua Park 品川</b>（日間海豚秀 Splash、水母牆、海底隧道、企鵝）。</p>
+<p><span class="time">16:00–17:30</span> 下午茶：高輪格蘭王子 Lounge Momiji（日式庭園）<b>或</b> 天王洲 Isle 水岸漫步。</p>
+<p>⭐ <span class="time">18:00</span> JR 品川→新宿（~13–18 分）→ 都民廣場看 <b>19:30/20:00 寶可夢+哥吉拉光雕秀</b>。</p>
+<p><span class="time">~20:30</span> JR 新宿→上野（~25 分）。</p>
+<p><span class="time">20:45–21:30</span> 上野晚餐 + 夜間購物（唐吉訶德 24h / Yodobashi 到 22:00）。</p>
+<p class="muted">不想跑新宿的話，保留原案「夜間 Aqua Park 雷射海豚秀 18:00–19:30」→ 品川直達上野，光雕秀就只放 Day3 平日場。</p>
+</div>
+</details>
+
+<details>
+<summary>🍽️ 三餐 ×3 備案</summary>
+<div class="card">
+<p><span class="tag b">早餐</span>① 飯店；② ecute 上野；③ 品川站 ecute 麵包（路上）。</p>
+<hr>
+<p><span class="tag l">午餐（品川）</span></p>
+<p><b>① 品川王子飯店「味街道 五十三次」</b>（家庭優雅，多選擇）¥2,000–3,500，建議訂位。</p>
+<p><b>② Atre 品川「利久牛舌」</b>（便捷）¥2,000–2,800，現場。</p>
+<p><b>③ T.Y.HARBOR</b>（天王洲運河畔，少觀光客、文青）精釀啤酒+美式，¥3,000+，<b>假日訂位</b>。Maps：<code>T.Y.HARBOR 天王洲</code>。</p>
+<hr>
+<p><span class="tag d">晚餐（上野，週日 20:00 後零售多打烊→鎖定餐廳）</span></p>
+<p><b>① 燒肉陽山道 / 敘敘苑 上野</b>（犒賞，<b>週日晚先訂位</b>）¥3,000–5,000。</p>
+<p><b>② 阿美橫町鐵道下「肉の大山 / 大統領」</b>（在地居酒屋氛圍，現場）¥1,500–2,500。</p>
+<p><b>③ 上野 Atre 商場餐廳（營業到 22:30）</b>（舒適、選擇多）¥1,500–2,500。</p>
+</div>
+</details>
+
+<details>
+<summary>💴 Day6 預算（/人）</summary>
+<div class="card">
+交通 <span class="price">¥1,000</span>（含新宿來回，NT$210）＋Aqua Park 一日券 <span class="price">¥2,500</span>＋午餐 <span class="price">¥3,000</span>＋下午茶 <span class="price">¥2,000</span>＋晚餐 <span class="price">¥3,000</span>＝<b class="big">約 ¥11,500（NT$2,415）</b>
+<br><span class="muted">光雕秀免費。省錢可跳過下午茶。</span>
+</div>
+</details>
+</section>
+
+<!-- ============================= DAY 7 ============================= -->
+<section id="d7">
+<h2>Day 7｜7/27(一)　上野晨散・返家</h2>
+<div class="muted">班機 13:25 起飛｜Skyliner 倒推</div>
+<img src="assets/day-07.png" alt="Day 7 旅程地圖" style="width:100%; max-width:480px; border-radius:16px; margin:16px auto; display:block; box-shadow:var(--shadow-lg);">
+
+<details open>
+<summary>🕒 倒推時間表 + 交通</summary>
+<div class="card">
+<p class="okbox">💡 <b>Day6 晚上先在京成上野站買好/劃位 Day7 的 Skyliner</b>，當天零壓力。</p>
+<p><span class="time">07:30–09:30</span> 晨間行程（見備案）。</p>
+<p><span class="time">09:40</span> 退房，步行至京成上野站。</p>
+<p><span class="time">10:20 或 10:40</span> Skyliner 出發（41–45 分）。</p>
+<p><span class="time">11:05 或 11:25</span> 抵成田，報到托運。</p>
+<p><span class="time">13:25</span> 起飛 🛫。</p>
+</div>
+</details>
+
+<details>
+<summary>🌅 晨間 3 備案 + 早餐</summary>
+<div class="card">
+<p><b>① 上野公園晨散（最推）</b>：不忍池 7 月荷花盛開（清晨最美）+ 國立科學博物館外巨大藍鯨模型 & D51 蒸汽火車頭（戶外免費打卡，週一休館不入內）。</p>
+<p><b>② ecute 上野最後採買</b>：8:00 開門麵包/伴手禮/扭蛋（企鵝小物）；二木の菓子 10:00 開（時間緊只能快閃）。</p>
+<p><b>③ 日式朝食</b>：PRONTO / Beck's（7:00 開）厚片吐司+黑咖啡；或 24h「名代 富士そば」熱湯蕎麥+溫泉蛋。</p>
+<p><span class="tag b">早餐 3 選</span>① ecute Andersen；② 富士そば（24h，¥500）；③ 飯店早餐。¥500–1,000。</p>
+</div>
+</details>
+
+<details>
+<summary>💴 Day7 預算（/人）</summary>
+<div class="card">
+Skyliner 來回攤半 <span class="price">¥2,580</span>（NT$540）＋早餐 <span class="price">¥800</span>＝<b class="big">約 ¥3,380（NT$710）</b>＋伴手禮另計。
+</div>
+</details>
+</section>
+
+<!-- ============ 省錢 ============ -->
+<section id="save">
+<h2>⑤ 省錢攻略</h2>
+<details open>
+<summary>🆓 免費景點 / 展望台</summary>
+<ul>
+<li>都廳南/北展望台（新宿，<b>免費</b>夜景，看完光雕秀順路）；都民廣場光雕秀本身免費。</li>
+<li>晴空塔 8F 千葉工大展示區（免費）；淺草文化觀光中心頂樓展望台（免費）。</li>
+<li>上野恩賜公園、不忍池、明治神宮、品川神社、東京車站丸之內廣場、天王洲水岸——皆免費。</li>
+<li>三大夏祭（上野夏祭、神樂坂阿波舞、隅田川花火自由區）——免費入場。</li>
+</ul>
+</details>
+<details>
+<summary>🎟️ 優惠券 / 折扣哪裡拿</summary>
+<ul>
+<li>門票：<b>Klook / KKday</b> 常比官網現場便宜（八景島、teamLab、墨田水族館、Aqua Park、澀谷 SKY），且可掃碼免排隊。</li>
+<li><b>唐吉訶德/Bic/Yodobashi 出示護照免稅 8–10%</b> + APP/官網優惠券再折。藥妝店（松本清等）滿額免稅 + 折價券。</li>
+<li>觀光案內所、機場、飯店大廳常有免費 coupon book。</li>
+</ul>
+</details>
+<details>
+<summary>💡 省錢小技巧 / 旅遊陷阱</summary>
+<ul>
+<li><b>超市撿便宜</b>：晚上 19:00 後 デパ地下/超市熟食、便當貼「半額/割引」黃標，當宵夜超划算（Day2/Day5 適用）。</li>
+<li><b>午餐比晚餐便宜</b>：同店午間定食（ランチ）常比晚餐省 30–40%，把好料安排在中午。</li>
+<li><b>便利商店好物</b>：唐揚雞、おでん關東煮、明治牛奶、各式布丁、急凍冰品，早餐宵夜都靠它。</li>
+<li><b>陷阱</b>：① 阿美橫町部分海鮮攤喊價要先問清總價；② 觀光區「無低消」茶屋仍可能加服務費；③ 居酒屋常有「お通し（強制小菜 ¥300–500/人）」，不是被坑是日本慣例；④ 計程車超貴，能搭電車就別搭。</li>
+</ul>
+</details>
+</section>
+
+<!-- ============ APP ============ -->
+<section id="app">
+<h2>⑥ 實用 APP 與工具</h2>
+<table>
+<tr><th>類別</th><th>推薦</th><th>用途</th></tr>
+<tr><td>交通導航</td><td><b>Google Maps</b> + <b>Japan Travel by NAVITIME</b> / <b>乗換案内</b></td><td>Google Maps 最直覺；NAVITIME 換乘月台/車資/首末班更準</td></tr>
+<tr><td>翻譯</td><td><b>Google 翻譯</b>（下載日文離線包+相機即時翻譯）、<b>Papago</b></td><td>菜單、藥妝成分拍照翻</td></tr>
+<tr><td>訂位</td><td><b>Tabelog</b>（食べログ評分）、<b>Hot Pepper</b>、<b>一休（高檔）</b>、<b>TableCheck</b></td><td>查評分/訂位；部分需日本手機，用網頁版或請飯店代訂</td></tr>
+<tr><td>票券</td><td><b>Klook / KKday</b></td><td>景點電子票、Skyliner、WiFi</td></tr>
+<tr><td>天氣</td><td><b>tenki.jp</b>、<b>Yahoo!天気</b>、<b>Windy</b>（雷雨）、花火官方「<b>雨雲ウォッチ</b>」</td><td>夏季午後雷陣雨判斷</td></tr>
+<tr><td>匯率</td><td><b>XE Currency</b></td><td>即時日圓/台幣</td></tr>
+<tr><td>支付</td><td>iPhone 錢包（<b>Suica</b>）</td><td>交通+小額購物</td></tr>
+</table>
+</section>
+
+<!-- ============ 打包 ============ -->
+<section id="pack">
+<h2>⑦ 行李打包（7 月東京 33–36°C、高濕、午後雷雨）</h2>
+<details open>
+<summary>👕 衣物 / 👟 鞋</summary>
+<ul>
+<li>透氣排汗短袖 T、薄襯衫；快乾材質為主（會狂流汗，每天 1 套換洗）。</li>
+<li><b>薄長袖外套/開襟衫</b>：水族館、博物館、電車冷氣超強，室內外溫差大（小孩必備防感冒）。</li>
+<li>祭典可帶/現場租<b>浴衣</b>（Day5 超應景）。</li>
+<li>鞋：<b>好走透氣的運動鞋/慢跑鞋</b>（每天走 1.5 萬步以上），加一雙涼鞋（teamLab 涉水穿短褲+赤腳，現場有置物）。</li>
+<li>防曬：太陽眼鏡（<b>澀谷 SKY 頂樓禁帶傘/帽，必備墨鏡</b>）、防曬乳、薄帽（戶外用）。</li>
+</ul>
+</details>
+<details>
+<summary>🔌 電子 / 💊 藥品 / 🎒 小物</summary>
+<ul>
+<li>電子：日本電壓 100V、插座<b>與台灣相同（雙平腳）免轉接</b>，但若帶歐規/英規裝置才需轉接頭；<b>行動電源（手機導航+拍照超耗電，每人 1 顆）</b>；多孔 USB 充電器、傳輸線。</li>
+<li>藥品：個人常備藥、腸胃藥、止痛退燒、OK 繃、暈車藥、防蚊液+止癢（公園/河邊蚊多）、<b>電解質/鹽錠（防中暑）</b>。</li>
+<li>消暑：<b>手持電風扇、涼感濕紙巾、保冷貼/退熱貼、折疊扇</b>（Day5 戶外救命）。</li>
+<li>雨具：<b>折疊傘 + 輕便雨衣</b>（午後雷陣雨來得快）。</li>
+<li>其他：保溫/保冷水壺（隨時補水）、小毛巾（豐洲千客萬來 2F 免費足湯）、野餐墊（Day5 花火/夏祭）、夾鏈袋、購物袋（日本袋子要錢）。</li>
+</ul>
+</details>
+<details>
+<summary>🧳 行李箱空間</summary>
+<ul>
+<li>去程行李箱<b>留 30–40% 空</b>（藥妝/零食/玩具/伴手禮會爆量）。</li>
+<li>帶一個可摺疊空包/大托特當回程加掛。</li>
+<li>Day6 把重的伴手禮排在上野飯店附近買（唐吉訶德/Yodobashi），免提著搭電車。</li>
+<li>液體（化妝水/酒）走託運；行動電源、鋰電池<b>只能手提上機</b>。</li>
+</ul>
+</details>
+</section>
+
+<!-- ============ 雨天/緊急 ============ -->
+<section id="rain">
+<h2>⑧ 雨天 / 緊急備案</h2>
+<details open>
+<summary>🌧️ 哪幾天怕雨 → 室內替代</summary>
+<table>
+<tr><th>原本怕雨的戶外段</th><th>室內備案</th></tr>
+<tr><td>Day1 上野公園/夏祭</td><td>改 PARCO_ya / 阿美橫町室內店家、上野的森美術館、晚祭縮短</td></tr>
+<tr><td>Day2 八景島戶外遊具</td><td>水族館本身全室內，遊樂設施雨天部分停開，<b>專攻海族之館/海豚館</b>；或直接走備案B回上野逛街</td></tr>
+<tr><td>Day3 明治神宮/表參道</td><td>切備案A（動物園室內館+科博全室內）或 B（teamLab/水族園/鐵塔皆室內）</td></tr>
+<tr><td>Day5 花火</td><td><b>荒天當天 8:00 宣布中止</b>。中止則改：晴空塔展望台、墨田水族館慢慢逛、Solamachi 購物、晴空塔 31F 展望咖啡看夜景</td></tr>
+<tr><td>Day6 品川神社/天王洲水岸</td><td>Aqua Park 全室內、品川王子室內、Atre 品川購物</td></tr>
+</table>
+<p class="muted">最不怕雨的天：Day2/Day4/Day5（水族館/teamLab/晴空塔皆室內）。怕雨優先動 Day1/Day3/Day6 的戶外段。</p>
+</details>
+<details>
+<summary>🔁 景點臨時關閉替代</summary>
+<ul>
+<li>teamLab 售完/維修 → <b>teamLab Borderless（麻布台）</b>或墨田水族館。</li>
+<li>澀谷 SKY 售完 → <b>東京鐵塔 / 都廳免費展望台 / Shibuya Hikarie Sky Lobby</b>。</li>
+<li>豐洲市場店休 → 葛西/築地場外市場（仍有壽司丼飯）。</li>
+<li>動物園週一休 → 科博/上野之森美術館。</li>
+</ul>
+</details>
+<details>
+<summary>🏥 身體不適：藥局 / 診所</summary>
+<ul>
+<li><b>藥妝店</b>（マツモトキヨシ松本清、サンドラッグ、ココカラ）幾乎滿街，可買成藥、口罩、貼布、退燒藥。</li>
+<li><b>上野周邊醫院</b>：永寿総合病院、東京都台東区周邊內科診所；急症撥 <b>119</b>（救護車/消防，免費）。</li>
+<li>觀光客就醫求助專線：JNTO 24h 旅遊熱線 <b>050-3816-2787</b>（中/英/日/韓）。</li>
+<li>保險：<b>務必買旅平險+海外醫療</b>（日本看診貴），留好保單與緊急聯絡。</li>
+<li>緊急報案 <b>110</b>（警察）；台北駐日經濟文化代表處急難救助電話出發前記下。</li>
+</ul>
+</details>
+</section>
+
+<!-- ============ 拍照 ============ -->
+<section id="photo">
+<h2>⑨ 拍照打卡指南</h2>
+<details open>
+<summary>📸 各景點最佳時間 / 角度 / 注意</summary>
+<ul>
+<li><b>都廳光雕秀（Day3/6）</b>：都民廣場正面拍全幅；夜暗對比強，手機開夜間模式、靠欄杆穩拍。</li>
+<li><b>澀谷 SKY（Day3）</b>：日落前 30 分上樓拍藍調夜景最美；頂樓 <b>禁帶傘/帽</b>，注意手機防摔繩。SKY EDGE 邊角是 IG 熱點。</li>
+<li><b>不忍池荷花（Day1/7）</b>：清晨 6–8 點花最開、光最柔，弁天堂為背景。</li>
+<li><b>明治神宮大鳥居（Day3C）</b>：早晨人少順光；神宮內<b>正殿前禁拍/脫帽</b>，尊重參拜。</li>
+<li><b>東京車站丸之內（Day2A）</b>：傍晚點燈後紅磚+廣場倒影，KITTE 屋上庭園可俯拍站舍正面（免費）。</li>
+<li><b>teamLab（Day4）</b>：水面倒影鏡像、垂直花朵房；<b>建議穿深色短褲、避免裙子（地面為鏡）</b>，相機防水袋。</li>
+<li><b>隅田川花火（Day5）</b>：晴空塔+花火同框是經典，先卡西側河岸；手機開煙火/長曝模式、用小腳架。</li>
+<li><b>品川 Aqua Park（Day6）</b>：水母牆變色、海豚秀水花（前排會濕，相機防水）；夜間秀雷射場最華麗。</li>
+<li><b>淺草觀光中心頂樓（Day5備案二）</b>：仲見世+晴空塔一鏡到底，免費私房點。</li>
+</ul>
+<p class="muted">通則：神社/寺廟正殿、部分店內、表演中可能禁拍；祭典拍人請禮貌。商店街拍照避免擋道。</p>
+</details>
+</section>
+
+<!-- ============ 總預算 ============ -->
+<section id="budget">
+<h2>⑩ 七日總預算（/人，估算）</h2>
+<table>
+<tr><th>Day</th><th>交通</th><th>門票/活動</th><th>餐食</th><th>小計(¥)</th><th>≈NT$</th></tr>
+<tr><td>D1</td><td>2,580</td><td>0</td><td>3,800</td><td>6,380</td><td>1,340</td></tr>
+<tr><td>D2</td><td>1,900</td><td>5,600</td><td>4,200</td><td>11,700</td><td>2,460</td></tr>
+<tr><td>D3</td><td>700</td><td>3,730</td><td>4,500</td><td>8,930</td><td>1,875</td></tr>
+<tr><td>D4</td><td>1,000</td><td>4,500</td><td>5,500</td><td>11,000</td><td>2,310</td></tr>
+<tr><td>D5</td><td>600</td><td>2,800</td><td>4,500</td><td>7,900</td><td>1,660</td></tr>
+<tr><td>D6</td><td>1,000</td><td>2,500</td><td>8,000</td><td>11,500</td><td>2,415</td></tr>
+<tr><td>D7</td><td>2,580</td><td>0</td><td>800</td><td>3,380</td><td>710</td></tr>
+<tr><th>合計</th><th>10,360</th><th>19,130</th><th>31,300</th><th>~60,790</th><th>~12,770</th></tr>
+</table>
+<div class="okbox">
+<b class="big">行程內每人 ≈ ¥60,000–65,000（約 NT$12,800–13,700）</b><br>
+<span class="muted">不含：機票、住宿、上網、保險、伴手禮/購物。小孩門票/餐費較低，整體會更省。預留 <b>每人 +¥20,000 購物彈性金</b>。</span>
+</div>
+</section>
+
+<!-- ============ Checklist ============ -->
+<section id="check">
+<h2>⑪ 行前 Checklist（出發前逐項打勾）</h2>
+<details open>
+<summary>✅ 文件 / 預約</summary>
+<ul>
+<li>☐ 護照效期 6 個月以上、機票、住宿確認單</li>
+<li>☐ <b>Visit Japan Web</b> 全員登錄完成（入境+海關 QR）</li>
+<li>☐ 旅平險+海外醫療投保</li>
+<li>☐ <b>澀谷 SKY</b> 開賣日(參觀前28天)搶日落場</li>
+<li>☐ <b>teamLab Planets</b> 指定時段票（提前 1 個月）</li>
+<li>☐ 墨田水族館 / 八景島 / Aqua Park 電子票</li>
+<li>☐ 邁泉青山本店 / 神樂坂 / 品川王子 / 上野燒肉 訂位（依選擇）</li>
+<li>☐ 都廳光雕秀「寶可夢場次」官網 TIMETABLE 截圖（Day3/Day6）</li>
+<li>☐ 確認 Day4 神樂坂阿波舞當年確切日期</li>
+</ul>
+</details>
+<details>
+<summary>✅ 票券 / 支付 / 網路</summary>
+<ul>
+<li>☐ iPhone 綁定 Suica 並儲值 ¥3,000+（每人）</li>
+<li>☐ Skyliner 來回票（去程機場買 / 回程 Day6 晚先劃位）</li>
+<li>☐ eSIM/WiFi 開通；換好現金（每人 ¥2–3 萬 + 共同基金）</li>
+<li>☐ 信用卡可海外刷/提款</li>
+</ul>
+</details>
+<details>
+<summary>✅ 行李</summary>
+<ul>
+<li>☐ 薄外套（室內冷氣）、好走鞋、墨鏡、防曬</li>
+<li>☐ 行動電源（手提）、充電器、轉接（如需）</li>
+<li>☐ 手持風扇、涼感巾、退熱貼、鹽錠、防蚊</li>
+<li>☐ 折疊傘+雨衣、水壺、野餐墊、購物袋</li>
+<li>☐ 個人藥品；行李箱留 30–40% 空</li>
+</ul>
+</details>
+</section>
+
+<!-- ============ AI Prompt ============ -->
+<section id="prompt">
+<h2>⑫ 可直接貼進 AI 旅遊工具的 Prompt（生成 PDF/手機版）</h2>
+<div class="accbox">
+把下面整段複製，貼到 <b>ChatGPT / Gemini / Claude / NotebookLM / Mapify / Wanderlog</b> 等工具，請它輸出可下載 PDF（或先轉 Markdown 再用 <a href="https://www.markdowntopdf.com/">markdowntopdf.com</a> / 印表機存 PDF）。<br>
+<span class="muted">推薦能直接生成可分享連結+PDF 的工具：Wanderlog、Mapify、Gamma；NotebookLM 可把本檔當來源問答。</span>
+</div>
+<div class="card">
+<pre class="prompt-pre">
+請依以下資料，產出一份「手機友善、可下載 PDF」的東京 7 日親子旅遊行程說明書，需含目錄、可點選跳轉、每日時間表、交通路線（含車種/分鐘/車資）、每餐 3 個餐廳備案（含日文店名/地址/最近車站/營業時間/必點/價格/是否訂位）、門票與預約連結、每日與總預算（日圓+台幣）、省錢攻略、實用 APP、7 月打包清單、雨天/緊急備案、拍照打卡點、行前 Checklist。語言用繁體中文，匯率 ¥100≈NT$21。
+
+【基本資料】
+- 日期：2026/7/21(二)–7/27(一)，共 7 天；2 大人+小孩家庭
+- 住宿全程：上野 Hotel Crown Hills Ueno Premier
+- 進出：去程 NRT 12:25 抵達；回程 7/27 班機 13:25 起飛
+- 交通主力：iPhone 綁定 Suica 嗶卡；機場往返用京成 Skyliner 來回票（勿買 JR Pass/地鐵一日券，因混用 JR+地鐵+私鐵）
+
+【每日主軸】
+D1 上野：HARBS 下午茶→阿美橫町→不忍池→上野夏祭
+D2 橫濱八景島海島樂園（水族館+遊樂設施），傍晚二擇一：東京車站地下街 或 直接回上野
+D3（平日）三備案擇一：A 上野動物園+科博+澀谷SKY+唐吉訶德；B 豐洲teamLab+葛西水族園+東京鐵塔；C 明治神宮+表參道+澀谷SKY。★當晚加：澀谷→新宿都廳「寶可夢光雕秀(免費)」21:00/21:30 場→回上野
+D4 葛西臨海水族園→豐洲市場午餐→teamLab Planets→神樂坂阿波舞祭（teamLab 全程只去這天一次）
+D5（週六）晴空塔千葉工大展示+郵政博物館→Toriton午餐→墨田水族館→隅田川花火大會(19:00-20:30)，花火野餐、步行回上野
+D6（週末/週日）品川神社+舊東海道→品川午餐→Maxell Aqua Park品川(日間秀)→下午茶。★傍晚加：品川→新宿都廳「寶可夢+哥吉拉光雕秀(免費)」19:30/20:00 場→回上野晚餐+夜購
+D7 上野公園晨散（不忍池荷花+科博戶外藍鯨/D51）→Skyliner→成田
+
+【必含重點】
+- 寶可夢光雕秀=都廳第一本廳舍東側/都民廣場，免費免預約，7月場次19:30/20:00/20:30/21:00/21:30，需查官網TIMETABLE確認寶可夢場次；週末同場有哥吉拉
+- 入境：Visit Japan Web 全員登錄、海關違禁品(肉品)、上網eSIM、現金/Suica
+- 提前預約：澀谷SKY(28天前搶日落場)、teamLab(1個月)、墨田水族館、八景島、邁泉青山本店訂位
+- 7月東京33-36°C高濕午後雷雨：防暑+雨具+室內備案
+請輸出完整可下載 PDF 連結。
+</pre>
+</div>
+</section>
+
+<div class="footer">
+清新版 · 產生於 2026/6/28　｜　所有時間/票價/營業時間以官方與 Google Maps 當日資訊為準。祝旅途愉快 🎌<br>
+本檔可用瀏覽器「列印 → 儲存為 PDF」帶著走（離線可看）。暗色原版：<code>tokyo-2026-guide.html</code>
+</div>
+
+</div>
+</body>
+</html>

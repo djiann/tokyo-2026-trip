@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>東京 7 日旅程地圖｜2026</title>
+<style>
+  :root {
+    --bg: #f6f4f0;
+    --ink: #5c4033;
+    --mut: #8a7568;
+    --line: #e6e1da;
+    --paper: #faf6ef;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "PingFang TC", "Noto Sans TC", "Hiragino Sans GB", "Microsoft JhengHei", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  header {
+    padding: 16px 18px 12px;
+    background: linear-gradient(145deg, #fff 0%, #fdf6f4 50%, #f0f7f8 100%);
+    border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 12px rgba(92,64,51,.06);
+  }
+  header h1 { font-size: 18px; font-weight: 700; color: var(--ink); }
+  header p { font-size: 12px; color: var(--mut); margin-top: 4px; }
+  .tabs {
+    display: flex; gap: 6px; padding: 10px 14px;
+    overflow-x: auto; white-space: nowrap;
+    background: rgba(246,244,240,.95);
+    border-bottom: 1px solid var(--line);
+    position: sticky; top: 62px; z-index: 99;
+    -webkit-overflow-scrolling: touch;
+  }
+  .tabs button {
+    flex-shrink: 0; padding: 7px 14px; border-radius: 20px;
+    border: 1.5px solid #d4c4b8; background: #fff;
+    font-size: 13px; font-weight: 700; color: var(--mut);
+    cursor: pointer; transition: all .15s;
+  }
+  .tabs button.active {
+    background: #7eb8d0; color: #fff; border-color: #5a9ab0;
+  }
+  .toolbar {
+    display: flex; gap: 8px; padding: 10px 14px; flex-wrap: wrap;
+  }
+  .toolbar button, .toolbar a button {
+    padding: 8px 16px; border-radius: 12px; border: none;
+    font-size: 13px; font-weight: 700; cursor: pointer;
+  }
+  .btn-png { background: #7eb8d0; color: #fff; }
+  .btn-pdf { background: #e8a0b0; color: #fff; }
+  .btn-guide { background: #fff; color: #5a9ab0; border: 1.5px solid #d4c4b8 !important; }
+  .map-viewport {
+    padding: 12px; display: flex; justify-content: center;
+  }
+  .map-card {
+    background: var(--paper);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(92,64,51,.12);
+    border: 2px solid #e8ddd0;
+    overflow: hidden; max-width: 480px; width: 100%;
+  }
+  .map-card img {
+    display: block; width: 100%; height: auto;
+  }
+  .hidden { display: none !important; }
+  footer {
+    text-align: center; padding: 20px; font-size: 11px; color: var(--mut);
+  }
+  @media print {
+    header, .tabs, .toolbar, footer { display: none !important; }
+    .map-viewport { padding: 0; }
+    .map-card { box-shadow: none; border: none; max-width: 100%; }
+    .map-panel { display: block !important; page-break-after: always; }
+    .map-panel.hidden { display: block !important; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>🗺️ 東京 7 日旅程地圖</h1>
+  <p>日系 kawaii 插畫風 · 蜿蜒彩虹道路 · 2026/7/21–7/27</p>
+</header>
+
+<nav class="tabs" id="tabs"></nav>
+
+<div class="toolbar">
+  <button class="btn-png" id="btnPngAll">📥 全部存 PNG (8張)</button>
+  <button class="btn-png" id="btnPng">📥 儲存目前 PNG</button>
+  <button class="btn-pdf" id="btnPdf">📄 列印 / PDF</button>
+  <a href="guide.html" style="text-decoration:none"><button class="btn-guide">📖 完整指南</button></a>
+</div>
+
+<div id="maps-container"></div>
+
+<footer>插畫風冒險地圖 · 主線實線 / 備案虛線 · 與完整指南同步</footer>
+
+<script>
+const MAPS = [
+  { label: '總覽', src: 'assets/overview.png', alt: '旅程總覽地圖', file: 'tokyo-journey-overview.png' },
+  { label: 'Day 1', src: 'assets/day-01.png', alt: 'Day 1 旅程地圖', file: 'tokyo-journey-day-01.png' },
+  { label: 'Day 2', src: 'assets/day-02.png', alt: 'Day 2 旅程地圖', file: 'tokyo-journey-day-02.png' },
+  { label: 'Day 3', src: 'assets/day-03.png', alt: 'Day 3 旅程地圖', file: 'tokyo-journey-day-03.png' },
+  { label: 'Day 4', src: 'assets/day-04.png', alt: 'Day 4 旅程地圖', file: 'tokyo-journey-day-04.png' },
+  { label: 'Day 5', src: 'assets/day-05.png', alt: 'Day 5 旅程地圖', file: 'tokyo-journey-day-05.png' },
+  { label: 'Day 6', src: 'assets/day-06.png', alt: 'Day 6 旅程地圖', file: 'tokyo-journey-day-06.png' },
+  { label: 'Day 7', src: 'assets/day-07.png', alt: 'Day 7 旅程地圖', file: 'tokyo-journey-day-07.png' }
+];
+
+function buildUI() {
+  const tabs = document.getElementById('tabs');
+  const container = document.getElementById('maps-container');
+  const panels = [];
+
+  MAPS.forEach((map, i) => {
+    const btn = document.createElement('button');
+    btn.textContent = map.label;
+    btn.dataset.idx = String(i);
+    btn.className = i === 0 ? 'active' : '';
+    tabs.appendChild(btn);
+
+    const panel = document.createElement('div');
+    panel.className = 'map-panel' + (i === 0 ? '' : ' hidden');
+    panel.dataset.idx = String(i);
+
+    const vp = document.createElement('div');
+    vp.className = 'map-viewport';
+
+    const card = document.createElement('div');
+    card.className = 'map-card';
+    card.id = 'map-panel-' + i;
+
+    const img = document.createElement('img');
+    img.src = map.src;
+    img.alt = map.alt;
+    img.loading = i === 0 ? 'eager' : 'lazy';
+    card.appendChild(img);
+
+    vp.appendChild(card);
+    panel.appendChild(vp);
+    container.appendChild(panel);
+    panels.push(panel);
+  });
+
+  tabs.addEventListener('click', e => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    const idx = btn.dataset.idx;
+    tabs.querySelectorAll('button').forEach(b => b.classList.toggle('active', b === btn));
+    panels.forEach(p => p.classList.toggle('hidden', p.dataset.idx !== idx));
+  });
+}
+
+function downloadPng(src, filename) {
+  return fetch(src)
+    .then(r => r.blob())
+    .then(blob => {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+    })
+    .catch(() => {
+      const a = document.createElement('a');
+      a.href = src;
+      a.download = filename;
+      a.click();
+    });
+}
+
+function exportPng() {
+  const idx = Number(document.querySelector('.map-panel:not(.hidden)')?.dataset.idx || 0);
+  const map = MAPS[idx];
+  downloadPng(map.src, map.file);
+}
+
+async function exportAllPng() {
+  for (const map of MAPS) {
+    await downloadPng(map.src, map.file);
+    await new Promise(r => setTimeout(r, 400));
+  }
+}
+
+document.getElementById('btnPng').addEventListener('click', exportPng);
+document.getElementById('btnPngAll').addEventListener('click', exportAllPng);
+document.getElementById('btnPdf').addEventListener('click', () => window.print());
+
+buildUI();
+</script>
+</body>
+</html>
