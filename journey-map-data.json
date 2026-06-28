@@ -1,0 +1,336 @@
+{
+  "meta": {
+    "title": "東京 7 日親子冒險地圖",
+    "subtitle": "2026/7/21 – 7/27｜住宿：上野",
+    "baseCamp": "上野 Hotel Crown Hills Ueno Premier"
+  },
+  "themeColors": {
+    "1": { "light": "#f5d0d6", "main": "#e8a0b0", "dark": "#d4566a" },
+    "2": { "light": "#d4ecf4", "main": "#7eb8d0", "dark": "#3a8f9f" },
+    "3": { "light": "#e4d8f4", "main": "#a890d0", "dark": "#7a5cb0" },
+    "4": { "light": "#d0f0e4", "main": "#6ec4a0", "dark": "#2d8a62" },
+    "5": { "light": "#fae8d0", "main": "#e8a860", "dark": "#c87820" },
+    "6": { "light": "#d0e4f8", "main": "#6898c8", "dark": "#3a6a9f" },
+    "7": { "light": "#dceee0", "main": "#88c8a0", "dark": "#4a9a68" },
+    "overview": { "light": "#f6f4f0", "main": "#d4566a", "dark": "#3a8f9f" }
+  },
+  "overview": {
+    "title": "7 日冒險總覽",
+    "subtitle": "成田出發 → 東京探險 → 成田返家",
+    "mascot": "🐼",
+    "stations": [
+      { "day": 1, "date": "7/21", "label": "抵達・夏祭", "icon": "✈️", "x": 88, "y": 42 },
+      { "day": 2, "date": "7/22", "label": "八景島海洋", "icon": "🐬", "x": 72, "y": 78 },
+      { "day": 3, "date": "7/23", "label": "澀谷夜景", "icon": "🌃", "x": 38, "y": 72 },
+      { "day": 4, "date": "7/24", "label": "豐洲・teamLab", "icon": "🐟", "x": 58, "y": 58 },
+      { "day": 5, "date": "7/25", "label": "晴空塔・花火", "icon": "🎆", "x": 52, "y": 38 },
+      { "day": 6, "date": "7/26", "label": "品川・光雕秀", "icon": "🌊", "x": 28, "y": 52 },
+      { "day": 7, "date": "7/27", "label": "晨散・返家", "icon": "🛫", "x": 82, "y": 18 }
+    ],
+    "baseCamp": { "label": "上野基地", "icon": "🏨", "x": 48, "y": 48 },
+    "sidebar": {
+      "foods": ["水果千層", "海鮮丼", "迴轉壽司", "屋台炒麵", "燒肉"],
+      "drinks": ["熱紅茶", "波子汽水", "明治牛奶", "生啤", "咖啡"],
+      "tips": ["Suica 嗶到底", "澀谷 SKY 提前 28 天搶票", "花火日步行回上野", "都廳光雕秀免費免預約"]
+    }
+  },
+  "days": [
+    {
+      "id": 1,
+      "date": "7/21(二)",
+      "title": "抵達・上野下午茶・夏日祭典",
+      "subtitle": "輕鬆收心、在地祭典",
+      "timeOfDay": "day",
+      "stops": [
+        { "id": "s1", "name": "NRT 成田機場", "icon": "✈️", "food": null, "type": "solid", "x": 12, "y": 10 },
+        { "id": "s2", "name": "Skyliner 列車", "icon": "🚄", "food": null, "type": "solid", "x": 32, "y": 16 },
+        { "id": "s3", "name": "京成上野站", "icon": "🏨", "food": null, "type": "solid", "x": 22, "y": 26 },
+        { "id": "s4", "name": "HARBS 蛋糕店", "icon": "🍰", "food": "水果千層", "type": "solid", "x": 52, "y": 32 },
+        { "id": "s5", "name": "阿美橫町", "icon": "🛍️", "food": "零食藥妝", "type": "solid", "x": 78, "y": 40 },
+        { "id": "s6", "name": "上野恩賜公園", "icon": "🌳", "food": null, "type": "solid", "x": 28, "y": 50 },
+        { "id": "s7", "name": "不忍池", "icon": "🪷", "food": null, "type": "solid", "x": 48, "y": 56 },
+        { "id": "s8", "name": "上野夏祭", "icon": "🏮", "food": "屋台炒麵", "type": "solid", "x": 75, "y": 66 }
+      ],
+      "branches": [],
+      "sidebar": {
+        "foods": [
+          { "name": "水果千層", "icon": "🍰", "stopId": "s4" },
+          { "name": "熱紅茶", "icon": "🍵", "stopId": "s4" },
+          { "name": "鳥貴族串燒", "icon": "🍢", "stopId": "s8" }
+        ],
+        "drinks": [
+          { "name": "熱紅茶", "icon": "🍵" },
+          { "name": "波子汽水", "icon": "🥤" },
+          { "name": "祭典啤酒", "icon": "🍺" }
+        ],
+        "tips": ["VJW 入境 QR 先填好", "HARBS 每人低消一杯飲品", "祭典屋台記得帶現金"]
+      },
+      "decorations": ["☁️", "🧭", "🐼", "🏮"]
+    },
+    {
+      "id": 2,
+      "date": "7/22(三)",
+      "title": "橫濱八景島海洋之夢",
+      "subtitle": "大型水族館避暑 + 遊樂設施",
+      "timeOfDay": "day",
+      "stops": [
+        { "id": "s1", "name": "上野出發", "icon": "🏨", "food": "Andersen麵包", "type": "solid", "x": 50, "y": 10 },
+        { "id": "s2", "name": "JR 橫濱", "icon": "🚃", "food": null, "type": "solid", "x": 50, "y": 22 },
+        { "id": "s3", "name": "八景島", "icon": "🐬", "food": "海鮮 BBQ", "type": "solid", "x": 50, "y": 36 },
+        { "id": "s4", "name": "海族之館", "icon": "🐠", "food": null, "type": "solid", "x": 38, "y": 46 },
+        { "id": "s5", "name": "遊樂設施", "icon": "🎢", "food": null, "type": "solid", "x": 62, "y": 46 },
+        { "id": "s6", "name": "回程分岔", "icon": "🔀", "food": null, "type": "solid", "x": 50, "y": 56 }
+      ],
+      "branches": [
+        {
+          "label": "備案 A",
+          "stops": [
+            { "id": "b1", "name": "東京站紅磚", "icon": "🏛️", "food": "拉麵街", "type": "dashed", "x": 72, "y": 64 },
+            { "id": "b2", "name": "一番街", "icon": "🎮", "food": null, "type": "dashed", "x": 78, "y": 72 },
+            { "id": "b3", "name": "回上野", "icon": "🏨", "food": null, "type": "dashed", "x": 68, "y": 80 }
+          ],
+          "fromStop": "s6"
+        },
+        {
+          "label": "備案 B",
+          "stops": [
+            { "id": "c1", "name": "直回上野", "icon": "🏨", "food": "二木の菓子", "type": "dashed", "x": 28, "y": 64 },
+            { "id": "c2", "name": "阿美橫町", "icon": "🛍️", "food": "炸豬排", "type": "dashed", "x": 22, "y": 74 }
+          ],
+          "fromStop": "s6"
+        }
+      ],
+      "sidebar": {
+        "foods": [
+          { "name": "海鮮 BBQ", "icon": "🦐", "stopId": "s3" },
+          { "name": "六厘舍沾麵", "icon": "🍜", "stopId": "b1" },
+          { "name": "炸豬排定食", "icon": "🍱", "stopId": "c2" }
+        ],
+        "drinks": [
+          { "name": "車上咖啡", "icon": "☕" },
+          { "name": "可樂", "icon": "🥤" },
+          { "name": "明治牛奶", "icon": "🥛" }
+        ],
+        "tips": ["16:00 上車後再決定傍晚備案", "海豚秀時間先查官網", "紀念品多可用東京站置物櫃"]
+      },
+      "decorations": ["☁️", "🧭", "🐬", "⛵"]
+    },
+    {
+      "id": 3,
+      "date": "7/23(四)",
+      "title": "知性夜景・寶可夢光雕秀",
+      "subtitle": "三備案擇一 + 平日都廳光雕秀",
+      "timeOfDay": "night",
+      "stops": [
+        { "id": "s1", "name": "上野動物園", "icon": "🐼", "food": null, "type": "solid", "x": 30, "y": 12 },
+        { "id": "s2", "name": "科學博物館", "icon": "🦕", "food": "Park Side", "type": "solid", "x": 30, "y": 24 },
+        { "id": "s3", "name": "澀谷 SKY", "icon": "🌆", "food": null, "type": "solid", "x": 50, "y": 38 },
+        { "id": "s4", "name": "唐吉訶德", "icon": "🛒", "food": null, "type": "solid", "x": 58, "y": 48 },
+        { "id": "s5", "name": "都廳光雕秀", "icon": "✨", "food": null, "type": "solid", "x": 68, "y": 58 },
+        { "id": "s6", "name": "回上野", "icon": "🏨", "food": "迴轉壽司", "type": "solid", "x": 50, "y": 72 }
+      ],
+      "branches": [
+        {
+          "label": "備案 B",
+          "stops": [
+            { "id": "b1", "name": "teamLab", "icon": "🌈", "food": null, "type": "dashed", "x": 72, "y": 18 },
+            { "id": "b2", "name": "千客萬來", "icon": "🍣", "food": "海鮮丼", "type": "dashed", "x": 78, "y": 28 },
+            { "id": "b3", "name": "葛西水族園", "icon": "🐟", "food": null, "type": "dashed", "x": 82, "y": 38 },
+            { "id": "b4", "name": "東京鐵塔", "icon": "🗼", "food": null, "type": "dashed", "x": 76, "y": 48 }
+          ],
+          "fromStop": "s1"
+        },
+        {
+          "label": "備案 C",
+          "stops": [
+            { "id": "c1", "name": "明治神宮", "icon": "⛩️", "food": null, "type": "dashed", "x": 18, "y": 18 },
+            { "id": "c2", "name": "表參道", "icon": "👜", "food": "邁泉豬排", "type": "dashed", "x": 14, "y": 30 },
+            { "id": "c3", "name": "→澀谷 SKY", "icon": "🌆", "food": null, "type": "dashed", "x": 22, "y": 40 }
+          ],
+          "fromStop": "s1"
+        }
+      ],
+      "sidebar": {
+        "foods": [
+          { "name": "Park Side Cafe", "icon": "☕", "stopId": "s2" },
+          { "name": "魚べい壽司", "icon": "🍣", "stopId": "s6" },
+          { "name": "邁泉炸豬排", "icon": "🍱", "stopId": "c2" }
+        ],
+        "drinks": [
+          { "name": "咖啡", "icon": "☕" },
+          { "name": "綠茶", "icon": "🍵" },
+          { "name": "思出橫丁生啤", "icon": "🍺" }
+        ],
+        "tips": ["澀谷 SKY 提前 28 天搶日落場", "光雕秀查官網寶可夢場次", "壽司郎/魚べい 用 App 抽號"]
+      },
+      "decorations": ["🌙", "⭐", "🧭", "✨"]
+    },
+    {
+      "id": 4,
+      "date": "7/24(五)",
+      "title": "海洋・豐洲・teamLab・阿波舞",
+      "subtitle": "海鮮午餐 + 沉浸藝術 + 夏祭",
+      "timeOfDay": "day",
+      "stops": [
+        { "id": "s1", "name": "上野出發", "icon": "🏨", "food": null, "type": "solid", "x": 50, "y": 8 },
+        { "id": "s2", "name": "葛西水族園", "icon": "🐟", "food": null, "type": "solid", "x": 42, "y": 20 },
+        { "id": "s3", "name": "豐洲市場", "icon": "🍣", "food": "仲家海鮮丼", "type": "solid", "x": 58, "y": 32 },
+        { "id": "s4", "name": "teamLab", "icon": "🌈", "food": null, "type": "solid", "x": 50, "y": 44 },
+        { "id": "s5", "name": "神樂坂", "icon": "🏮", "food": "蕎麥/法餐", "type": "solid", "x": 38, "y": 56 },
+        { "id": "s6", "name": "阿波舞祭", "icon": "💃", "food": "屋台小吃", "type": "solid", "x": 50, "y": 68 },
+        { "id": "s7", "name": "回上野", "icon": "🌙", "food": null, "type": "solid", "x": 50, "y": 78 }
+      ],
+      "branches": [
+        {
+          "label": "teamLab已去",
+          "stops": [
+            { "id": "b1", "name": "直達神樂坂", "icon": "➡️", "food": null, "type": "dashed", "x": 68, "y": 48 }
+          ],
+          "fromStop": "s3"
+        }
+      ],
+      "sidebar": {
+        "foods": [
+          { "name": "仲家海鮮丼", "icon": "🍱", "stopId": "s3" },
+          { "name": "天婦羅定食", "icon": "🍤", "stopId": "s3" },
+          { "name": "神樂坂蕎麥", "icon": "🍜", "stopId": "s5" }
+        ],
+        "drinks": [
+          { "name": "抹茶", "icon": "🍵" },
+          { "name": "可爾必思", "icon": "🥛" },
+          { "name": "祭典啤酒", "icon": "🍺" }
+        ],
+        "tips": ["壽司大中午多半收攤", "teamLab 涉水穿短褲", "確認阿波舞當年日期"]
+      },
+      "decorations": ["☁️", "🧭", "🐟", "🎋"]
+    },
+    {
+      "id": 5,
+      "date": "7/25(六)",
+      "title": "晴空塔・墨田水族・隅田川花火",
+      "subtitle": "全日最擠・花火野餐",
+      "timeOfDay": "sunset",
+      "stops": [
+        { "id": "s1", "name": "上野出發", "icon": "🏨", "food": "Doutor", "type": "solid", "x": 50, "y": 8 },
+        { "id": "s2", "name": "晴空塔展示", "icon": "🗼", "food": null, "type": "solid", "x": 42, "y": 20 },
+        { "id": "s3", "name": "郵政博物館", "icon": "📮", "food": null, "type": "solid", "x": 58, "y": 28 },
+        { "id": "s4", "name": "Toriton壽司", "icon": "🍣", "food": "迴轉壽司", "type": "solid", "x": 50, "y": 38 },
+        { "id": "s5", "name": "墨田水族館", "icon": "🐧", "food": null, "type": "solid", "x": 38, "y": 48 },
+        { "id": "s6", "name": "隅田公園卡位", "icon": "🧺", "food": "超市便當", "type": "solid", "x": 58, "y": 56 },
+        { "id": "s7", "name": "花火大會", "icon": "🎆", "food": "屋台小吃", "type": "solid", "x": 50, "y": 66 },
+        { "id": "s8", "name": "步行回上野", "icon": "🚶", "food": null, "type": "solid", "x": 50, "y": 76 }
+      ],
+      "branches": [
+        {
+          "label": "上午備案",
+          "stops": [
+            { "id": "b1", "name": "科學博物館", "icon": "🦕", "food": null, "type": "dashed", "x": 22, "y": 18 },
+            { "id": "b2", "name": "淺草觀光中心", "icon": "🏯", "food": null, "type": "dashed", "x": 78, "y": 18 }
+          ],
+          "fromStop": "s1"
+        }
+      ],
+      "sidebar": {
+        "foods": [
+          { "name": "Toriton 壽司", "icon": "🍣", "stopId": "s4" },
+          { "name": "超市冷便當", "icon": "🍱", "stopId": "s6" },
+          { "name": "屋台章魚燒", "icon": "🐙", "stopId": "s7" }
+        ],
+        "drinks": [
+          { "name": "冰飲料", "icon": "🧊" },
+          { "name": "波子汽水", "icon": "🥤" },
+          { "name": "17:00後少喝水", "icon": "💧" }
+        ],
+        "tips": ["17:00 前先上廁所", "15:00 前買好野餐便當", "花火後步行回上野別擠車站"]
+      },
+      "decorations": ["🎆", "☀️", "🧭", "🐧"]
+    },
+    {
+      "id": 6,
+      "date": "7/26(日)",
+      "title": "品川海洋・週末光雕秀",
+      "subtitle": "寶可夢 + 哥吉拉・上野收尾",
+      "timeOfDay": "night",
+      "stops": [
+        { "id": "s1", "name": "上野出發", "icon": "🏨", "food": null, "type": "solid", "x": 50, "y": 8 },
+        { "id": "s2", "name": "品川神社", "icon": "⛩️", "food": null, "type": "solid", "x": 38, "y": 20 },
+        { "id": "s3", "name": "Aqua Park", "icon": "🐬", "food": "利久牛舌", "type": "solid", "x": 58, "y": 30 },
+        { "id": "s4", "name": "下午茶", "icon": "☕", "food": null, "type": "solid", "x": 42, "y": 42 },
+        { "id": "s5", "name": "都廳光雕秀", "icon": "✨", "food": null, "type": "solid", "x": 62, "y": 54 },
+        { "id": "s6", "name": "上野晚餐", "icon": "🥩", "food": "燒肉", "type": "solid", "x": 50, "y": 66 },
+        { "id": "s7", "name": "唐吉訶德", "icon": "🛒", "food": null, "type": "solid", "x": 38, "y": 76 }
+      ],
+      "branches": [
+        {
+          "label": "不跑新宿",
+          "stops": [
+            { "id": "b1", "name": "夜間海豚秀", "icon": "🌊", "food": null, "type": "dashed", "x": 72, "y": 48 },
+            { "id": "b2", "name": "直回上野", "icon": "🏨", "food": null, "type": "dashed", "x": 78, "y": 58 }
+          ],
+          "fromStop": "s4"
+        },
+        {
+          "label": "下午茶",
+          "stops": [
+            { "id": "c1", "name": "高輪庭園", "icon": "🍵", "food": null, "type": "dashed", "x": 22, "y": 42 },
+            { "id": "c2", "name": "天王洲水岸", "icon": "⛵", "food": null, "type": "dashed", "x": 18, "y": 50 }
+          ],
+          "fromStop": "s3"
+        }
+      ],
+      "sidebar": {
+        "foods": [
+          { "name": "利久牛舌", "icon": "🥩", "stopId": "s3" },
+          { "name": "燒肉陽山道", "icon": "🔥", "stopId": "s6" },
+          { "name": "五十三次", "icon": "🍱", "stopId": "s3" }
+        ],
+        "drinks": [
+          { "name": "下午茶紅茶", "icon": "🍵" },
+          { "name": "精釀啤酒", "icon": "🍺" },
+          { "name": "咖啡", "icon": "☕" }
+        ],
+        "tips": ["週末同場有哥吉拉光雕", "週日晚燒肉先訂位", "伴手禮在上野買最省力"]
+      },
+      "decorations": ["🌙", "⭐", "🧭", "🐳"]
+    },
+    {
+      "id": 7,
+      "date": "7/27(一)",
+      "title": "上野晨散・返家",
+      "subtitle": "不忍池荷花・Skyliner 回成田",
+      "timeOfDay": "dawn",
+      "stops": [
+        { "id": "s1", "name": "上野晨散", "icon": "🪷", "food": "富士蕎麥", "type": "solid", "x": 35, "y": 18 },
+        { "id": "s2", "name": "藍鯨模型", "icon": "🐋", "food": null, "type": "solid", "x": 50, "y": 30 },
+        { "id": "s3", "name": "退房", "icon": "🧳", "food": null, "type": "solid", "x": 65, "y": 40 },
+        { "id": "s4", "name": "京成上野", "icon": "🚉", "food": null, "type": "solid", "x": 50, "y": 52 },
+        { "id": "s5", "name": "Skyliner", "icon": "🚄", "food": null, "type": "solid", "x": 50, "y": 64 },
+        { "id": "s6", "name": "成田機場", "icon": "✈️", "food": null, "type": "solid", "x": 50, "y": 76 }
+      ],
+      "branches": [
+        {
+          "label": "晨間備案",
+          "stops": [
+            { "id": "b1", "name": "ecute採買", "icon": "🛍️", "food": "伴手禮", "type": "dashed", "x": 22, "y": 28 },
+            { "id": "b2", "name": "日式朝食", "icon": "🍞", "food": "厚片吐司", "type": "dashed", "x": 78, "y": 22 }
+          ],
+          "fromStop": "s1"
+        }
+      ],
+      "sidebar": {
+        "foods": [
+          { "name": "富士蕎麥", "icon": "🍜", "stopId": "s1" },
+          { "name": "ecute 麵包", "icon": "🥐", "stopId": "b1" },
+          { "name": "二木の菓子", "icon": "🍬", "stopId": "b1" }
+        ],
+        "drinks": [
+          { "name": "黑咖啡", "icon": "☕" },
+          { "name": "熱湯蕎麥湯", "icon": "🍵" },
+          { "name": "明治牛奶", "icon": "🥛" }
+        ],
+        "tips": ["Day6 晚先買好 Skyliner 票", "班機 13:25 倒推 10:20 出發", "週一科博休館戶外仍可打卡"]
+      },
+      "decorations": ["🌅", "☁️", "🧭", "🐼"]
+    }
+  ]
+}
